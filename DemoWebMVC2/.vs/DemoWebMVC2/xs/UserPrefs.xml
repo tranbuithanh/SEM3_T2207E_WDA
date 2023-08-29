@@ -1,4 +1,35 @@
 ﻿<Properties StartupConfiguration="{F8C72062-0192-4A3D-8E8F-0F2AB920CAD2}|http">
-  <MonoDevelop.Ide.ItemProperties.DemoWebMVC2 FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.DemoWebMVC2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/tranthimaihien/Documents/fpt/SEM3/SEM3_T2207E_WDA/DemoWebMVC2/DemoWebMVC2/Controllers/HomeController.cs" relfile="DemoWebMVC2/Controllers/HomeController.cs" line="53" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DemoWebMVC2/Program.cs">
+    <Files>
+      <File FileName="DemoWebMVC2/Program.cs" Line="23" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DemoWebMVC2">
+            <Node name="DemoWebMVC2">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>dataSet.Tables.Count</Value>
+          <Value>dataSet.Tables.Count</Value>
+          <Value>dtPerson.Rows[0][1]</Value>
+          <Value>dtPerson.Tables.Count</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
