@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zUWYxcueMiCRZB9CVxcTwfK6nuaPBa4087ljuNqIHgQ=",
+  "Hash": "qEth1MJmXmTf8kHMIdgk5BUqJNJ0PUbfZXks7x3cDVI=",
   "Source": "Web3.EF.FirstCode",
   "BasePath": "_content/Web3.EF.FirstCode",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.EF.FirstCode/obj/Debug/net7.0/scopedcss/projectbundle/Web3.EF.FirstCode.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.EF.FirstCode/wwwroot/.DS_Store",
+      "SourceId": "Web3.EF.FirstCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.EF.FirstCode/wwwroot/",
+      "BasePath": "_content/Web3.EF.FirstCode",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.EF.FirstCode/wwwroot/css/site.css",

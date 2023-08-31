@@ -6,6 +6,10 @@ namespace Web3.EF.FirstCode.DAL
 {
     public class CustomerDbContext : DbContext
     {
+        public CustomerDbContext()
+        {
+
+        }
      
         public CustomerDbContext(DbContextOptions<CustomerDbContext> options) : base(options)
         {
@@ -16,7 +20,12 @@ namespace Web3.EF.FirstCode.DAL
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Customer>().ToTable("Customer");
         }
-        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            string connectionString = "Server=localhost,1433;Database=SEM3_WDA_1st;User Id=sa;Password=Abcd@1234;TrustServerCertificate=true";
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer(connectionString);
+        }
     }
 }
 

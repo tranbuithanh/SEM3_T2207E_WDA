@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Web3.EF.FirstCode.bundle.scp.css"
     },
     {
+      "Id": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.EF.FirstCode/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.EF.FirstCode/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

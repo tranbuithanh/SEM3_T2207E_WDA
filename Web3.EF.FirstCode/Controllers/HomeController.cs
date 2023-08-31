@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Web3.EF.FirstCode.DAL;
 using Web3.EF.FirstCode.Models;
 
 namespace Web3.EF.FirstCode.Controllers;
@@ -15,7 +16,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        List<Customer> customers = new List<Customer>();
+        using (var dbContext = new CustomerDbContext())
+        {
+            customers = dbContext.Customers.ToList();
+        }
+        return View(customers);
     }
 
     public IActionResult Privacy()
