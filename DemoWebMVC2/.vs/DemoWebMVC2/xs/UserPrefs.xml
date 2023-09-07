@@ -1,23 +1,40 @@
 ﻿<Properties StartupConfiguration="{F8C72062-0192-4A3D-8E8F-0F2AB920CAD2}|http">
-  <MonoDevelop.Ide.ItemProperties.DemoWebMVC2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/tranthimaihien/Documents/fpt/SEM3/SEM3_T2207E_WDA/DemoWebMVC2/DemoWebMVC2/Controllers/HomeController.cs" relfile="DemoWebMVC2/Controllers/HomeController.cs" line="53" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.DemoWebMVC2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DemoWebMVC2/Program.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DemoWebMVC2/Controllers/HomeController.cs">
     <Files>
-      <File FileName="DemoWebMVC2/Program.cs" Line="23" Column="1" />
+      <File FileName="DemoWebMVC2/Program.cs" Line="12" Column="1" />
+      <File FileName="DemoWebMVC2/Controllers/HomeController.cs" Line="31" Column="32" />
+      <File FileName="DemoWebMVC2/Models/Customer.cs" Line="21" Column="1" />
+      <File FileName="DemoWebMVC2/DAL/CustomerDbContext.cs" Line="12" Column="86" />
+      <File FileName="DemoWebMVC2/Migrations/20230830140247_Test.Designer.cs" Line="44" Column="1" />
+      <File FileName="DemoWebMVC2/Views/Shared/_Layout.cshtml" Line="26" Column="107" />
+      <File FileName="DemoWebMVC2/Views/Home/Index.cshtml" Line="23" Column="9" />
+      <File FileName="DemoWebMVC2/Properties/launchSettings.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DemoWebMVC2">
+          <Node name="DemoWebMVC2" expanded="True">
             <Node name="DemoWebMVC2">
               <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" selected="True" />
+              <Node name="DAL" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -28,8 +45,12 @@
           <Value>dataSet.Tables.Count</Value>
           <Value>dtPerson.Rows[0][1]</Value>
           <Value>dtPerson.Tables.Count</Value>
+          <Value>dtPerson.Rows[0][0]</Value>
+          <Value>con.State</Value>
+          <Value>dtPerson</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using DemoWebMVC2.Models;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using DemoWebMVC2.DAL;
 
 namespace DemoWebMVC2.Controllers;
 
@@ -17,9 +18,17 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        DataTable dt = new DataTable();
-        dt = this.GetPerson();
-        return View();
+        //
+        //DataTable dt = new DataTable();
+        //dt = this.GetPerson();
+        //return View();
+
+        List<Customer> customers = new List<Customer>();
+        using (var dbContext = new CustomerDbContext())
+        {
+            customers = dbContext.Customers.ToList();
+        }
+        return View(customers);
     }
 
     public IActionResult Privacy()
@@ -40,17 +49,13 @@ public class HomeController : Controller
         string connectionString = @"Server=localhost;
             Database=SEM3_WDA;User=sa;Password=Abcd@1234;TrustServerCertificate=True";
         string sqlCommand = "SELECT * FROM Person";
-        using (var con = new SqlConnection(connectionString))
+        using (SqlCommand cmd = new SqlCommand(sqlCommand, new SqlConnection(connectionString)))
         {
-            con.Open();
-            using (SqlCommand cmd = new SqlCommand(sqlCommand, new SqlConnection(connectionString)))
-            {
-                cmd.Connection.Open();
-                dtPerson.Load(cmd.ExecuteReader());
-            }
-        };
+            cmd.Connection.Open();
+            dtPerson.Load(cmd.ExecuteReader());
+        }
+   
         dataSet.Tables.Add(dtPerson);
         return dtPerson;
     }
 }
-

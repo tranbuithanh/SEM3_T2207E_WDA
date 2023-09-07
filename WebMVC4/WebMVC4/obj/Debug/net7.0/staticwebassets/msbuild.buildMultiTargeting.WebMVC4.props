@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/WebMVC4.props" />
+</Project>
