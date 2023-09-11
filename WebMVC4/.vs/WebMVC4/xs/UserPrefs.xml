@@ -1,4 +1,48 @@
 ﻿<Properties StartupConfiguration="{15DF48BE-2D40-4AAB-88A7-066A07730F60}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.WebMVC4 FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebMVC4/Program.cs">
+    <Files>
+      <File FileName="WebMVC4/Models/Customer.cs" />
+      <File FileName="WebMVC4/Views/Shared/_Layout.cshtml" />
+      <File FileName="WebMVC4/Program.cs" Line="10" Column="45" />
+      <File FileName="WebMVC4/Views/Customers/Create.cshtml" />
+      <File FileName="WebMVC4/Views/Customers/Index.cshtml" />
+      <File FileName="WebMVC4/Views/Customers/Edit.cshtml" />
+      <File FileName="WebMVC4/Views/Customers/Details.cshtml" />
+      <File FileName="WebMVC4/Views/Customers/Delete.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebMVC4">
+            <Node name="WebMVC4" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Customers" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>dataSet.Tables.Count</Value>
+          <Value>dataSet.Tables.Count</Value>
+          <Value>dtPerson.Rows[0][1]</Value>
+          <Value>dtPerson.Tables.Count</Value>
+          <Value>dtPerson.Rows[0][0]</Value>
+          <Value>con.State</Value>
+          <Value>dtPerson</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WebMVC4 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
