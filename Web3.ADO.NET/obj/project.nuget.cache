@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BJUSKNxwVdaSDh4vCs7CDLUeOpV1IRm2nrLiPxt+wYz+jfLgIMyhQ2c0SKDbqtvGZnMePWOuk7LpoZKX2JjpEg==",
+  "dgSpecHash": "W7tMZXn0Hp71oUK3ddIoJzTYfwWPeyLGiUQsBG2lCi5TNNBNe+NXrr/EhYHEzBdWmtGVqFcWUIjU1276Al/5cA==",
   "success": true,
-  "projectFilePath": "/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.ADO.NET/Web3.ADO.NET.csproj",
+  "projectFilePath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/Web3.ADO.NET/Web3.ADO.NET.csproj",
   "expectedPackageFiles": [
     "/Users/cuongnguyen/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/cuongnguyen/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

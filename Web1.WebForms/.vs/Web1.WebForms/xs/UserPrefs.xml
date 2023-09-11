@@ -1,7 +1,13 @@
-﻿<Properties StartupConfiguration="{A7EA7DB9-E10D-48BF-9282-766EE59C9B03}|https">
+﻿<Properties StartupConfiguration="{98A627BD-B6E0-443E-B0B2-6CB8D90DFF61}|https">
+  <MonoDevelop.Ide.ItemProperties.Web3.MVC__Example PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Web1.WebForms PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Web3.EF.FirstCode PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Web3.EF.FirstCode/Web3.EF.FirstCode.csproj</String>
   </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.Web3.ADO.NET PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../Web3.ADO.NET/Controllers/HomeController.cs">
     <Files>
       <File FileName="Web1.WebForms.csproj" />
@@ -74,11 +80,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Web1.WebForms PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.ItemProperties.Web3.ADO.NET PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.ItemProperties.Web3.MVC__Example PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Web3.ProductManager PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <Breakpoint file="/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web1.WebForms/Web3.MVC_Example/Controllers/HomeController.cs" relfile="Web3.MVC_Example/Controllers/HomeController.cs" line="16" column="9" />
     <Breakpoint file="/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web1.WebForms/Web3.MVC_Example/Controllers/HomeController.cs" relfile="Web3.MVC_Example/Controllers/HomeController.cs" line="33" column="9" />
@@ -87,5 +89,4 @@
     <Breakpoint file="/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web1.WebForms/Web3.MVC_Example/Controllers/HomeController.cs" relfile="Web3.MVC_Example/Controllers/HomeController.cs" line="54" column="9" />
     <Breakpoint file="/Users/cuongnguyen/Works/3.Education/Sem3_WDA/sem3_web/Web3.ADO.NET/Controllers/HomeController.cs" line="23" column="13" />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Web3.EF.FirstCode PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>
