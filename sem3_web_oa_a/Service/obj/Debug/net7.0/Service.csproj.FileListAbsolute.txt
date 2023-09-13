@@ -1,0 +1,17 @@
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Service.deps.json
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Service.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Service.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Domain.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Infrastructure.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Domain.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/bin/Debug/net7.0/Infrastructure.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.csproj.AssemblyReference.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.AssemblyInfoInputs.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.AssemblyInfo.cs
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.csproj.CoreCompileInputs.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.csproj.CopyComplete
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/refint/Service.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/Service.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Service/obj/Debug/net7.0/ref/Service.dll

@@ -1,0 +1,12 @@
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/bin/Debug/net7.0/Domain.deps.json
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/bin/Debug/net7.0/Domain.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/bin/Debug/net7.0/Domain.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/refint/Domain.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/Domain.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Domain/obj/Debug/net7.0/ref/Domain.dll

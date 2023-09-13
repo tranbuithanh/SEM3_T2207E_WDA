@@ -5,3 +5,5 @@ Web3.EF.FirstCode/bin/Debug/*
 Web3.EF.FirstCode/bin/Debug/*
 */bin/Debug/*
 */obj/*
+*.cache
+*/obj/*

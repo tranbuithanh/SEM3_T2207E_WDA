@@ -1,0 +1,62 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddUser</h1>
+@Html.Label("","Thêm mới người dùng",new { @class="label label-success"})
+@using (Html.BeginForm("AddUser", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row" style="padding:16px;">
+        <div class="col">
+            @Html.LabelFor(t=>t.FirstName)
+            @Html.TextBoxFor(t=>t.FirstName, new {@class ="form-control",placeholder = "Họ"})
+        </div>
+        <div class="col">
+            @Html.LabelFor(t=>t.LastName)
+            @Html.TextBoxFor(t=>t.LastName, new {@class ="form-control", placeholder ="Tên"})
+        </div>
+    </div>
+    <div class="row" style="padding:16px;">
+        <div class="col">
+            @Html.LabelFor(t=>t.Name)
+            @Html.TextBoxFor(t=>t.Name, new {@class ="form-control",placeholder ="Tên"})
+        </div>
+        <div class="col">
+            @Html.LabelFor(t=>t.Address)
+            @Html.TextBoxFor(t=>t.Address, new {@class ="form-control",placeholder ="Địa chỉ"})
+        </div>
+    </div>
+    <div class="row" style="padding:16px;">
+        <div class="col">
+            @Html.LabelFor(t=>t.UserName)
+            @Html.TextAreaFor(t=>t.UserName, new {@class="form-control"})
+        </div>
+        <div class="col">
+            @Html.LabelFor(t=>t.Password)
+            @Html.TextAreaFor(t=>t.Password, new {@class="form-control"})
+        </div>
+        
+    </div>
+    <div class="row" style="padding:16px;">
+        <div class="col">
+            @Html.LabelFor(t=>t.Email)
+            @Html.TextAreaFor(t=>t.Email, new {@class="form-control"})
+        </div>
+        <div class="col">
+            @Html.LabelFor(t=>t.AddedDate)
+            @Html.TextAreaFor(t=>t.AddedDate, new {@class="form-control"})
+        </div>
+    </div>
+    <div class="row" style="padding-left:16px;">
+        @Html.ActionLink("Về danh mục","Index","User")
+    </div>
+    <div class="row" style="padding:16px;">
+        <div class="col-8">
+            <button class="btn btn-success">Lưu</button>
+            <button class="btn btn-danger"> Hủy bỏ</button>
+        </div>
+    </div>
+
+}

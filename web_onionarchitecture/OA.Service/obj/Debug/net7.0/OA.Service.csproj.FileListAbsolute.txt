@@ -1,0 +1,17 @@
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Service.deps.json
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Service.dll
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Service.pdb
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Domain.dll
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Repo.dll
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Domain.pdb
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/bin/Debug/net7.0/OA.Repo.pdb
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.csproj.AssemblyReference.cache
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.AssemblyInfoInputs.cache
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.AssemblyInfo.cs
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.csproj.CoreCompileInputs.cache
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.csproj.CopyComplete
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.dll
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/refint/OA.Service.dll
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/OA.Service.pdb
+/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/Debug/net7.0/ref/OA.Service.dll

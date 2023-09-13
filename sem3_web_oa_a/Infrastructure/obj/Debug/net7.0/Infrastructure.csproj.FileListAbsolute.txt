@@ -1,0 +1,15 @@
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/bin/Debug/net7.0/Infrastructure.deps.json
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/bin/Debug/net7.0/Infrastructure.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/bin/Debug/net7.0/Infrastructure.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/bin/Debug/net7.0/Domain.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/bin/Debug/net7.0/Domain.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.AssemblyInfo.cs
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.csproj.CopyComplete
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/refint/Infrastructure.dll
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/Infrastructure.pdb
+/Users/cuongnguyen/Works/3.Education/sem3_web_oa_a/Infrastructure/obj/Debug/net7.0/ref/Infrastructure.dll
