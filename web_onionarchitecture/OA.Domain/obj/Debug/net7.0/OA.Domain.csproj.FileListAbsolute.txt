@@ -12,3 +12,17 @@
 /Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.pdb
 /Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.genruntimeconfig.cache
 /Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/ref/OA.Domain.dll
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/bin/Debug/net7.0/OA.Domain.deps.json
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/bin/Debug/net7.0/OA.Domain.runtimeconfig.json
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/bin/Debug/net7.0/OA.Domain.dll
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/bin/Debug/net7.0/OA.Domain.pdb
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.csproj.AssemblyReference.cache
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.AssemblyInfoInputs.cache
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.AssemblyInfo.cs
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.csproj.CoreCompileInputs.cache
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.dll
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/refint/OA.Domain.dll
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.pdb
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/OA.Domain.genruntimeconfig.cache
+/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/Debug/net7.0/ref/OA.Domain.dll

@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OA.Web
 build_property.RootNamespace = OA.Web
-build_property.ProjectDir = /Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/
+build_property.ProjectDir = /Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web
+build_property.MSBuildProjectDirectory = /Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Home/Index.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Home/Privacy.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Product/Index.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/Error.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/_AddUser.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/_AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BZGRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/_Modal.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/_Modal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Nb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/_ModalFooter.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/_ModalFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Nb2RhbEZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/_ModalHeader.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/_ModalHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Nb2RhbEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/User/AddUser.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/User/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BZGRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/User/Index.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/_ViewImports.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/_ViewStart.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Web/Views/Shared/_Layout.cshtml]
+[/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-r9h4pu16fo

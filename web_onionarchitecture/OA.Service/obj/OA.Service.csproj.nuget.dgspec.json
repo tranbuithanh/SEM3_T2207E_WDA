@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/OA.Service.csproj": {}
+    "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Service/OA.Service.csproj": {}
   },
   "projects": {
-    "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj": {
+    "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj",
+        "projectUniqueName": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj",
         "projectName": "OA.Domain",
-        "projectPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj",
+        "projectPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj",
         "packagesPath": "/Users/cuongnguyen/.nuget/packages/",
-        "outputPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/obj/",
+        "outputPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/cuongnguyen/.nuget/NuGet/NuGet.Config"
@@ -70,14 +70,14 @@
         }
       }
     },
-    "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Repo/OA.Repo.csproj": {
+    "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Repo/OA.Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Repo/OA.Repo.csproj",
+        "projectUniqueName": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Repo/OA.Repo.csproj",
         "projectName": "OA.Repo",
-        "projectPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Repo/OA.Repo.csproj",
+        "projectPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Repo/OA.Repo.csproj",
         "packagesPath": "/Users/cuongnguyen/.nuget/packages/",
-        "outputPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Repo/obj/",
+        "outputPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Repo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/cuongnguyen/.nuget/NuGet/NuGet.Config"
@@ -93,8 +93,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj": {
-                "projectPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj"
+              "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj": {
+                "projectPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj"
               }
             }
           }
@@ -134,14 +134,14 @@
         }
       }
     },
-    "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/OA.Service.csproj": {
+    "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Service/OA.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/OA.Service.csproj",
+        "projectUniqueName": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Service/OA.Service.csproj",
         "projectName": "OA.Service",
-        "projectPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/OA.Service.csproj",
+        "projectPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Service/OA.Service.csproj",
         "packagesPath": "/Users/cuongnguyen/.nuget/packages/",
-        "outputPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Service/obj/",
+        "outputPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/cuongnguyen/.nuget/NuGet/NuGet.Config"
@@ -157,11 +157,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj": {
-                "projectPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Domain/OA.Domain.csproj"
+              "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj": {
+                "projectPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Domain/OA.Domain.csproj"
               },
-              "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Repo/OA.Repo.csproj": {
-                "projectPath": "/Users/cuongnguyen/Works/3.Education/web_onionarchitecture/OA.Repo/OA.Repo.csproj"
+              "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Repo/OA.Repo.csproj": {
+                "projectPath": "/Users/cuongnguyen/Works/3.Education/Shared/Sem1/SEM3_T2207E_WDA/web_onionarchitecture/OA.Repo/OA.Repo.csproj"
               }
             }
           }

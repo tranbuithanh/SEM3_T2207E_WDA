@@ -1,0 +1,6 @@
+﻿Bước 1: Cài đặt thư viện AutoMaper và AutoMapper.Extentions.Microsoft.DependencyInjection
+Bước 2: Đăng ký middleware
+Bước 3: Tạo Model, ViewModel
+Bước 4: Sử dụng.
+
+// Refernce: https://code-maze.com/automapper-net-core/

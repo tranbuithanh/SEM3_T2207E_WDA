@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/SEM3.Example.AutoMapper.props" />
+</Project>

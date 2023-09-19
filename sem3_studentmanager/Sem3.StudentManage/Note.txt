@@ -1,0 +1,5 @@
+﻿
+Bước 1: Sửa connection string phù hợp với từng máy
+Bước 2: Sử dụng lệnh Update-Database (Windows) hoặc dotnet ef database update(Mac) để update database
+Bước 3: Run project
+Note: Lưu ý ứng dụng được xây dựng với NET 7 và Database MSSQL server

@@ -1,0 +1,53 @@
+@model IEnumerable<Sem3.StudentManage.Models.StudentModel>
+
+@{
+    ViewData["Title"] = "SIS";
+}
+
+<h2>Hệ thống thông tin sinh viên</h2>
+
+<p>
+    <a asp-action="Create">Thêm mới sinh viên</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+               <img src ="data:image;base64,@item.Image" width="64px" height="64px" style="border-radius: 50%;"/>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StudentId">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.StudentId">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.StudentId">Xoá</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
