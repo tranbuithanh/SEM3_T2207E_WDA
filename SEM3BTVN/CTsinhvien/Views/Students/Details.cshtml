@@ -1,0 +1,48 @@
+﻿@model CTsinhvien.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Studentname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Studentname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Studenttel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Studenttel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Studentbirth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Studentbirth)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Studentadress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Studentadress)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Class.ClassId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Studentid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

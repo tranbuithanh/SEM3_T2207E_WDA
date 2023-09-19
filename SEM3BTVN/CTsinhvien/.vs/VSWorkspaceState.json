@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Release",
+    "\\bin\\Release\\net7.0",
+    "\\Properties",
+    "\\wwwroot\\css",
+    "\\wwwroot\\lib",
+    "\\wwwroot\\lib\\bootstrap\\dist",
+    "\\wwwroot\\lib\\jquery"
+  ],
+  "PreviewInSolutionExplorer": false
+}

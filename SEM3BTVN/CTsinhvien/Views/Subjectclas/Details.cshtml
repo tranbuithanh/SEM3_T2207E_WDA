@@ -1,0 +1,30 @@
+﻿@model CTsinhvien.Models.Subjectcla
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Subjectcla</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Subjectname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Subjectname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Course)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Subjectclsid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
