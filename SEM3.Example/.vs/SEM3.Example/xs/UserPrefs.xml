@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{3F1DD27D-A985-447E-B292-2E5226429CB9}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SEM3.Example.AutoMapper PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SEM3.Example.AutoMapper/ViewModels/ProductViewModel.cs">
+    <Files>
+      <File FileName="SEM3.Example.AutoMapper/appsettings.json" Line="1" Column="1" />
+      <File FileName="SEM3.Example.AutoMapper/Models/User.cs" Line="1" Column="1" />
+      <File FileName="SEM3.Example.AutoMapper/Profiles/UserProfiles.cs" Line="1" Column="1" />
+      <File FileName="SEM3.Example.AutoMapper/ViewModels/ProductViewModel.cs" Line="1" Column="1" />
+      <File FileName="SEM3.Example.AutoMapper/ViewModels/UserViewModel.cs" Line="1" Column="1" />
+      <File FileName="SEM3.Example.AutoMapper/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
