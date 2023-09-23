@@ -1,0 +1,189 @@
+﻿@model List<mobilephone>;
+@{
+    ViewData["Title"] = "Iphone";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+<div class="col-md-3  ">
+    <div class="row">
+        <nav class="container bg-white vh-100" style="width: 100%">
+            <ul class="nav flex-column align-content-center">
+                <div class="mt-2" style="background-color: #f16234; width: 100%">
+                    <h4 class="text-white text-center ">
+                        <i class="bi bi-list"></i>
+                        All Catecories
+                    </h4>
+
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link active" asp-action="iphone" asp-controller="AllProduct">
+                        <i class="bi bi-phone"></i> PHONE
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-laptop"></i> LAPTOP
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-phone-landscape"></i> IPADS
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-pc-display-horizontal"></i> PC-LINH KIỆN
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-headphones"></i> ACCESSORY
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-rocket"></i> PROMOTION
+                    </a>
+                </li>
+                <!--  -->
+                <hr class="text-">
+                <ul class="list-group " style="display: flex;">
+                    <li class="list-group-item mt-3 bg-dark text-white border border-0 ">
+                        <img src="" alt="Ảnh bài hát" class="img-fluid"
+                             style="width: 50px; height: 50px;"> SMARTPHONE<i class="bi bi-play-circle ms-3"></i>
+                    </li>
+                    <li class="list-group-item mt-3 bg-dark text-white border border-0 ">
+                        <img src="image/Laptop.jpeg" alt="Ảnh bài hát" class="img-fluid"
+                             style="width: 50px; height: 50px;"> LAPTOP <i class="bi bi-play-circle ms-3"></i>
+                    </li>
+                    <li class="list-group-item mt-3 bg-dark text-white border border-0 ">
+                        <img src="image/Ipads.jpeg" alt="Ảnh bài hát" class="img-fluid"
+                             style="width: 50px; height: 50px;"> IPAD<i class="bi bi-play-circle ms-3"></i>
+                    </li>
+                    <li class="list-group-item mt-3 bg-dark text-white border border-0 ">
+                        <img src="image/Pc-Pk.jpeg" alt="Ảnh bài hát" class="img-fluid"
+                             style="width: 50px; height: 50px;"> ACCESSORY <i class="bi bi-play-circle ms-3"></i>
+                    </li>
+                  
+
+                </ul>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!--body-right-->
+<div class="col-md-9 p-0" style="height: 1350px">
+    <div class="container-fluid bg-dark">
+
+    </div>
+    <!--Product-->
+    <div class="container-fluid mt-3">
+        <div class="btt btn-primary mb-2" style="width: 150px; height: 35px">
+            <span>All MobilePhone</span>
+        </div>
+        <div class="row">
+            @foreach (var item in Model){
+                <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="@Url.Content(item.Thumbnail)" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title" style="height: 40px;">@item.PhoneName</h6>
+                        <p class="card-text text-danger fw-bold">@item.Price <del>đ</del></p>
+                        <p class="card-text">@item.Config</p>
+                        <a asp-action="infoproduct" asp-route-id="@item.Id" class="btn btn-primary"><i class="bi bi-cart-check"></i> Add product</a>
+                    </div>
+                </div>
+            </div>
+            }
+            
+
+        </div>
+    </div>
+    <!--phân trang-->
+    <div class="container-fluid mt-2 ">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination float-end">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link"  href="/Home/pagination/?page=1">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link"  href="/Home/pagination/?page=2">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="/Home/pagination/?page=3">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--Tien ICh mo rong -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="card mb-3 rounded">
+                    <div class="row g-0 " style="background-color: #a0f3a2">
+                        <div class="col-md-4">
+                            <img src="image/debit-card.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Thanh toán ipay </h5>
+                                <p class="card-text">Thanh toán nhanh chóng, tiện lợi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card mb-3 rounded">
+                    <div class="row g-0 " style="background-color: #eecea0">
+                        <div class="col-md-4">
+                            <img src="image/payment-method.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Thẻ cào điện thoại</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">Giảm 2%</span> Cho mệnh giá thẻ từ
+                                    100.000đ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card mb-3 rounded">
+                    <div class="row g-0 " style="background-color: #a6bdf1">
+                        <div class="col-md-4">
+                            <img src="image/online-banking.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Thẻ game</h5>
+                                <p class="card-text">
+                                    <span class="text-danger">Giảm 2%</span> Cho mệnh giá thẻ từ
+                                    100.000đ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,64 @@
+@model IEnumerable<marketperry.Models.Cart>
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["CART"]</h1>
+<h2 class="btn btn-success">Đang Hoàn Thiện</h2>
+<div class="container mt-3 mb-4">
+    <h2>Cart Perry</h2>
+    <p>Thanh toán nhanh gọn</p>
+    <table class="table table-striped">
+        <thead>
+        <tr class="table-dark text-center">
+            <th>#</th>
+            <th>Image</th>
+            <th>Product's Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="text-center">
+                <td>@item.Id</td>
+                <td>
+                    <img src="" style="width: 200px;" alt="">
+                </td>
+                <td></td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a href="" class="btn btn-warning">Pay</a>
+                    <a href="" class="btn btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <a asp-action="iphone" asp-controller="AllProduct" class="btn btn-danger">Tiếp tục mua hàng</a>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-6">
+                <div class="col-md-6">
+                    <Label>Tổng Tiền : </Label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text">
+                </div>
+                <div class="col-md-6 mt-3">
+                    <a asp-action="" class="btn btn-success">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -->

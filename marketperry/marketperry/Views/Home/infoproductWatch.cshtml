@@ -1,0 +1,61 @@
+﻿@model AppleWatch;
+@{
+    ViewData["Title"] = "Product";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container-fuild">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card mb-3" style="max-width: 100%; height: 600px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="@Url.Content(Model.Thumbnail)" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.WtachName</h5>
+                            <p class="card-text text-danger">@Model.Price đ</p>
+                            <label for="">Quantity</label>
+                            <input type="number">
+                            <div class="mt-3">
+                            <a class="btn btn-danger" asp-action="Index" asp-route-id="@Model.Id">Mua Hang</a>
+                            <a class="btn btn-primary">Mua Trả Góp LH 09090909090</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <span class="text-primary">Mô tả sản phẩm</span>
+                    <hr class="text-danger">
+                    <p class="fw-bold">Màn hình Super Retina ấn tượng</p>
+                    <p class="ms-3">@Model.Status</p>
+                </div>
+            </div>
+        </div>
+        <!--navbar-->
+        <div class="col-md-3">
+            <div class="container-fluid">
+            <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title btn btn-primary">Bảo Hành 12 Tháng 1 Đổi 1</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-cart-check-fill fs-4 text-danger"></i> Hướng dẫn mua hàng</a></li>
+                                <li class="list-group-item"><a href="#" class="text-decoration-none" ><i class="bi bi-ev-front-fill fs-5"></i> Chính sách vận chuyển</a></li>
+                                <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="bi bi-gear-wide fs-4"></i> Chính sách bảo hành</a></li>
+                                 <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="bi bi-arrow-repeat fs-4"></i> Chính sách đổi trả</a></li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                <div class="mt-3">
+                    <div class="container-fluid p-0 bg-dark" >
+                        <img src="@Url.Content(Model.Thumbnail)" class="img-fluid" alt="">
+                    </div>
+                </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>

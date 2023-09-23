@@ -1,0 +1,54 @@
+@model marketperry.Models.mobilephone
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>mobilephone</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form action="/Admin/mobile/Edit/?id=@Model.Id" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="PhoneName" class="control-label"></label>
+                <input asp-for="PhoneName" class="form-control" />
+                <span asp-validation-for="PhoneName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Thumbnail" class="control-label"></label>
+                <input asp-for="Thumbnail" class="form-control" />
+                <span asp-validation-for="Thumbnail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Config" class="control-label"></label>
+                <input asp-for="Config" class="form-control" />
+                <span asp-validation-for="Config" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a  href="/Admin/mobile/Index/">Back to List</a>
+</div>
+
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@

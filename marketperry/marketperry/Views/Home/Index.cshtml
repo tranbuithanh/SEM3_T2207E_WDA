@@ -1,0 +1,272 @@
+﻿@model List<mobilephone>;
+<div class="row" style="height: 1640px">
+    <!--body-left-->
+    <div class="col-md-3 bg-white ">
+        <div class="row">
+            <nav class="container bg-white vh-100" style="width: 100%">
+                <ul class="nav flex-column align-content-center">
+                    <div class="mt-2" style="background-color: #f16234; width: 100%">
+                        <h4 class="text-white text-center ">
+                            <i class="bi bi-list"></i>
+                            All Catecories
+                        </h4>
+
+                    </div>
+
+                    <div class="" style="padding-left: 50px">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-action="iphone" asp-controller="AllProduct">
+                                <i class="bi bi-phone me-2"></i> PHONE
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="AllProduct" asp-action="AppleWatch">
+                                <i class="bi bi-smartwatch me-2"></i> APPWATCH
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-vinyl me-2"></i> AIRPODS
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-credit-card me-2"></i> APPLE CARD
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="IOS17">
+                                <i class="bi bi-app-indicator me-2 "></i> IOS 17
+                            </a>
+                        </li>
+
+                    </div>
+                    <!--  -->
+                    <hr class="text-">
+                    <div class="container-fluid p-0">
+                        <img src="image/iphon15.gif" alt=""
+                            class="w-100 img-fluid">
+                            <h3 class="text-center mt-2 text-secondary-emphasis ">Iphone 15 Seris</h3>
+                    </div>
+                    <hr class="text-danger mt-3">
+                </ul>
+                <div class="container-fluid">
+                    <img src="https://i.pinimg.com/474x/d7/5a/71/d75a71f59e1371003db65c618cb48719.jpg" alt=""
+                        class="w-100 img-fluid">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--body-right-->
+    <div class="col-md-9 p-0" style="height: 1350px">
+        <div class="container-fluid ">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner bg-dark" style="height: 400px ">
+                    <div class="carousel-item active">
+                        <img src="https://i.pinimg.com/564x/e5/32/b4/e532b466ee30ee251e09a39815415251.jpg"
+                            alt="Los Angeles" class="d-block w-100" style=" object-position:  center">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.pinimg.com/564x/1f/d4/70/1fd4705ec66d48eb859267732aa7b23d.jpg" alt="Chicago"
+                            class="d-block  w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.pinimg.com/564x/79/d8/15/79d81590ec546279bd4602cf0e9d468a.jpg"
+                            alt="New York" class="d-block w-100">
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!--Product-->
+        <div class="container-fluid mt-3" style=" height: 280px">
+            <div class="row">
+                <div class="container  " style="">
+                    <button type="button" class="btn btn-warning fs-6 text-white" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                        Extend
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 overflow-hidden">
+                                <img src="image/IOS17.jpg" class="img-fluid rounded-start" alt="..."
+                                    style="height: 200px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">This is the iOS 17 wish list</h5>
+                                    <p class="card-text" style="height: 120px">
+                                        This is the iOS 17 wish list - more customisable Home Screen, updated apps,
+                                        improved Camera controls and more. What do you want to see in iOS 17?.
+                                    </p>
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 95%">95%</div>
+                                    </div>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 overflow-hidden">
+                                <img src="image/CartApple.jpg" class="img-fluid rounded-start" alt="..."
+                                    style="height: 200px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple Pay</h5>
+                                    <p class="card-text" style="height: 120px">With Apple Card, we completely reinvented
+                                        the credit card. Your information lives on your iPhone, beautifully laid out and
+                                        easy to understand...</p>
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+                                    </div>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ma Sp-->
+        <div class="container-fluid mt-3">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="@item.Thumbnail" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="height: 65px">@item.PhoneName</h5>
+                                <p class="card-text">Some quick examp lk of the card's content.</p>
+                                <a asp-action="iphone" asp-controller="AllProduct" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <!-- Cart Mo rong-->
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="card" style="width: 18rem; background:#D9D6CC">
+
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Wallet</h3>
+                                <p class="card-text">All your credit and debit cards,
+                                    transit cards, boarding passes,
+                                    and more. All in one place.</p>
+                                <a href="#" class="">Learn more <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                            <img src="image/iphone-wallet-app.jpg" style="height: 180px;" class="card-img-top" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card" style="width: 18rem; background: rgba(0, 98, 250, 0.92);">
+
+                            <div class="card-body text-center text-white">
+                                <h3 class="card-title "><i class="bi bi-apple"></i> Pay</h3>
+                                <p class="card-text">The safer way to make
+                                    secure, contactless purchases
+                                    in stores and online.</p>
+                                <a href="#" class="">Learn more <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                            <img src="image/Pay2.jpg" class="card-img-top" style="height: 180px;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card" style="width: 18rem; background:#171719">
+
+                            <div class="card-body text-center text-white">
+                                <h3 class="card-title"><i class="bi bi-apple"></i> Cash</h3>
+                                <p class="card-text">Use it to send and receive money, and spend wherever Apple Pay is
+                                    accepted.</p>
+                                <a href="#" class="">Learn more <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                            <img src="image/Cash.jpg" class="card-img-top" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tien ICh mo rong -->
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="card mb-3 rounded">
+                            <div class="row g-0 " style="background-color: #a0f3a2">
+                                <div class="col-md-4">
+                                    <img src="image/debit-card.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="height: 45px">Thanh toán ipay </h5>
+                                        <p class="card-text">Thanh toán nhanh chóng, tiện lợi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card mb-3 rounded">
+                            <div class="row g-0 " style="background-color: #eecea0">
+                                <div class="col-md-4">
+                                    <img src="image/payment-method.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="height: 45px">Thẻ cào điện thoại</h5>
+                                        <p class="card-text"><span class="text-danger">Giảm 2%</span> Cho mệnh giá thẻ
+                                            từ 100.000đ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card mb-3 rounded">
+                            <div class="row g-0 " style="background-color: #a6bdf1">
+                                <div class="col-md-4">
+                                    <img src="image/online-banking.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="height: 45px">Thẻ game</h5>
+                                        <p class="card-text"> <span class="text-danger">Giảm 2%</span> Cho mệnh giá thẻ
+                                            từ 100.000đ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

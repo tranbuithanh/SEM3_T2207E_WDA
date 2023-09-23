@@ -1,0 +1,50 @@
+@model marketperry.Models.AppleWatch
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AppleWatch</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form action="/Admin/AppleWatch/Create/" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WtachName" class="control-label"></label>
+                <input asp-for="WtachName" class="form-control" />
+                <span asp-validation-for="WtachName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Thumbnail" class="control-label"></label>
+                <input asp-for="Thumbnail" class="form-control" />
+                <span asp-validation-for="Thumbnail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Config" class="control-label"></label>
+                <input asp-for="Config" class="form-control" />
+                <span asp-validation-for="Config" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

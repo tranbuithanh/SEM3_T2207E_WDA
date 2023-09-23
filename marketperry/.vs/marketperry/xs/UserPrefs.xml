@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{4BD64F20-D126-46C0-B8DD-2CB71C80CC42}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="marketperry/Views/Components/Cart.cs">
+    <Files>
+      <File FileName="marketperry/Controllers/AllProductController.cs" />
+      <File FileName="marketperry/Views/Home/Index.cshtml" />
+      <File FileName="marketperry/Controllers/HomeController.cs" />
+      <File FileName="marketperry/Program.cs" Line="37" Column="11" />
+      <File FileName="marketperry/Views/Components/Cart.cs" Line="17" Column="32" />
+      <File FileName="marketperry/Views/Shared/_Layout.cshtml" Line="101" Column="57" />
+      <File FileName="marketperry/Views/Shared/Components/Cart/Default.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="marketperry" expanded="True">
+            <Node name="marketperry">
+              <Node name="API" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Components" expanded="True">
+                  <Node name="Cart.cs" selected="True" />
+                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="Components" expanded="True">
+                    <Node name="Cart" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.marketperry PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
