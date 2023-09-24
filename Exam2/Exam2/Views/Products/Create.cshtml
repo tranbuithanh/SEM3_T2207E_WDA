@@ -1,0 +1,90 @@
+﻿@model Exam2.Models.Product;
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<body>
+    <main class="main-active">
+        <button id="sidebar-button" class="btn btn-primary btn-sm">
+            <img alt="list-icon" src="/assets/list.svg">
+        </button>
+        <section id="upload-video">
+            <div class="button-group">
+                <button class="btn btn-outline-primary btn-lg">Create</button>
+            </div>
+            <div class="row context">
+                <div class="col-md add-video">
+                    <h3><img id="previewImage" src="#" alt="Preview Image" style="display: none; max-width: 100%;" /></h3>
+
+                </div>
+                <form asp-action="Create" method="post" id="form-input" enctype="multipart/form-data">
+                    <div class="col-md add-information">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="title">Name</span>
+                            </div>
+                            <input asp-for="Name" placeholder="Required field" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="Name">
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="title">NumberChapter</span>
+                            </div>
+                            <input asp-for="NumberChapter" placeholder="Required field" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="NumberChapter">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="title">Description</span>
+                            </div>
+                            <input asp-for="Description" placeholder="Required field" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="Description">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="title">Author</span>
+                            </div>
+                            <select asp-for="AuthorId" class="form-control" asp-items="ViewBag.AuthorId"></select>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="title">Category</span>
+                            </div>
+                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="title">Image</span>
+                            </div>
+                            <input asp-for="Image" placeholder="Required field" type="file" class="form-control" aria-label="Sizing example input" aria-describedby="Image">
+                        </div>
+
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    document.querySelector('input[type="file"]').addEventListener('change', function (event) {
+        const fileInput = event.target;
+        const previewImage = document.getElementById('previewImage');
+
+        if (fileInput.files && fileInput.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block';
+            };
+
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    });
+</script>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

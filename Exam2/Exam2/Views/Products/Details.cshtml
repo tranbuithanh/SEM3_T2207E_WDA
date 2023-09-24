@@ -1,0 +1,57 @@
+﻿@model Exam2.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<body>
+    <main class="main-active">
+        <button id="sidebar-button" class="btn btn-primary btn-sm">
+            <img alt="list-icon" src="/assets/list.svg">
+        </button>
+        <div style="padding: 30px 0">
+            <h1 class="title-heading">Product Detail</h1>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+                <dd class="col-sm-10">
+                    <img src="data:image/jpeg;base64,@Model.Image" alt="Image" width="100" />
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NumberChapter)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NumberChapter)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Author)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Author.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Category)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Category.Name)
+                </dd>
+            </dl>
+
+            <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </main>
+</body>
