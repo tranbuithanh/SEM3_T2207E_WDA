@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/insuarance_TranThiMaiHien.props" />
+</Project>

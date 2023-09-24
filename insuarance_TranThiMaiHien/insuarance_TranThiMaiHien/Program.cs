@@ -1,7 +1,15 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Connect db
+var connectionString = builder.Configuration.GetConnectionString("T2207E");
+builder.Services.AddDbContext<insuarance_TranThiMaiHien.Entities.DataContext>(
+        options => options.UseSqlServer(connectionString)
+    );
+// End
 
 var app = builder.Build();
 

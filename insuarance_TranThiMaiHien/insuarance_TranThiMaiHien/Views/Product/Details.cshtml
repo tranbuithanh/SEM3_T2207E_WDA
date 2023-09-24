@@ -1,0 +1,106 @@
+@model insuarance_TranThiMaiHien.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="page-heading" id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-content">
+                    <h2>@Model.name</h2>
+                    <span>Liên hệ hotline: 039.225.9898 để đặt hàng ngay</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+<!-- ***** Product Area Starts ***** -->
+<section class="section" id="product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="left-images">
+                    <img src="@Model.img" alt="">
+                    
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="right-content">
+                    <h4>@Model.name</h4>
+                    <small><del>@Model.price.ToString("N0")</del></small>
+                    <span class="price">@Model.sale_price.ToString("N0") VND</span>
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <div class="quote" style="padding-bottom: 20px">
+                        <i class="fa fa-quote-left"></i><p>@Model.description</p>
+                    </div>
+                   
+                    <!-- ***** Contact Area Starts ***** -->
+                    <div class="contact-us">
+                        <div class="container">
+                            <div class="row">
+                                
+                                <div class="col-lg-12">
+                                    <div class="section-heading">
+                                        <h2>Đăng ký mua ngay theo form dưới đây</h2>
+                                        <span>Nếu cần gấp vui lòng liên hệ Hotline: 039.225.9898 - để kích hoạt ngay trong 5 phút </span>
+                                    </div>
+                                    <form id="contact" asp-action="Create" method="post" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <fieldset>
+                                                    <input name="name" type="text" id="name" placeholder="Họ tên" required="">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <fieldset>
+                                                    <input name="phone" type="text" id="phone" placeholder="Số điện thoại" required>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <textarea name="address" rows="3" id="address" placeholder="Địa chỉ nhận hàng (để trống nếu mua điện tử)"></textarea>
+                                                </fieldset>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <textarea name="message" rows="6" id="message" placeholder=" Điền thông tin xe:tên chủ xe, địa chỉ, biển số, số chỗ, số khung, số " required=""></textarea>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <input type="file" name="file" id="file" >
+                                                </fieldset>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <fieldset>
+                                                    <div class="total" style="border-top: 1px solid #eee; padding-top: 20px">
+
+                                                        <div class="main-border-button"><a href=" ">Đăng ký mua ngay</a></div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ***** Contact Area Ends ***** -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
