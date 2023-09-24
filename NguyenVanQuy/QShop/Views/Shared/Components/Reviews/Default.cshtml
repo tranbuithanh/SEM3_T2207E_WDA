@@ -1,0 +1,18 @@
+﻿@using QShop.Models;
+@model IEnumerable<QShop.Models.Review>
+@{
+
+}
+@foreach (var item in Model)
+{
+	<div class="creator_item creator_card space-x-10 swiper-slide" style="width: 550px">
+		<div class="avatars space-x-10 d-flex">
+			<img src="@item.user.Thumbnail" class="avatar avatar-md" />
+			<div class="ps-2">
+				<p class="avatars_name color_black fw-bold">@item.user.UserName</p>
+				<p class="text-start my-2">@Html.Raw(Helper.generateStarRatingHTML(item.Rating))</p>
+			</div>
+		</div>
+		<div class="text-secondary text-start mt-3">@item.Content</div>
+	</div>
+}

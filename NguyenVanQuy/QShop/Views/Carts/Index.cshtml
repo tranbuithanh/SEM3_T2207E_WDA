@@ -1,0 +1,197 @@
+@model IEnumerable<QShop.Models.Cart>
+
+@{
+	ViewData["Title"] = "Giỏ hàng | Qshop";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	int yourMoney = ViewData["your-money"] as int? ?? 0;
+	int amount = ViewData["amount"] as int? ?? 0;
+	int remainingAmount = yourMoney - amount;
+	string formattedAmount = string.Format("{0:N0}", remainingAmount);
+}
+
+@section css {
+	<link rel="stylesheet" href="/css/cart.css" />
+	<link rel="stylesheet" href="/css/pagination.css" />
+	<link rel="stylesheet" href="/css/table.css" />
+}
+
+<div class="container-fluid p-0" style="margin-top: 66px">
+	<div class="hero_marketplace bg_white">
+		<div class="container">
+			<h1 class="text-center">GIỎ HÀNG</h1>
+		</div>
+	</div>
+</div>
+@if (Model.Count() > 0)
+{
+	<div class="container">
+		<div class="w-100" style="overflow-x: auto; white-space: nowrap;">
+			<table class="table table-dark table-hover">
+				<thead>
+					<tr>
+						<th>#ID</th>
+						<th>Game</th>
+						<th>Account</th>
+						<th>Rank</th>
+						<th>Level</th>
+						<th>Tướng</th>
+						<th>RP</th>
+						<th>Tinh hoa lam</th>
+						<th>Giá</th>
+						<th>Mô tả</th>
+						<th style="width:100px"> </th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>#@item.Id</td>
+							<td style="height : 60px;padding: 0; vertical-align: middle;"><img class="h-50" src="@item.account.game.Logo"
+									alt=""> <span>@item.account.game.Name</span></td>
+							<td>@item.account?.Email</td>
+							<td style="height : 60px;padding: 0; vertical-align: middle;"><img class="h-100"
+									src="@item.account?.rank?.Thumbnail" alt=""></td>
+							<td>@item.account?.Grade</td>
+							<td>@item.account?.Champion</td>
+							<td>@item.account?.PrimaryPoint</td>
+							<td>@item.account?.SecondaryPoint</td>
+							<td>@string.Format("{0:N0}", item.account?.Price)</td>
+							<td>@item.account?.Description</td>
+							<td class="d-flex">
+								<a class="btn-edit-item text-center" href="/accounts/details/?id=@item.account.Id">
+									<i class="bi bi-card-checklist" style="color: var(--green-color);"></i>
+								</a>
+								<span class="btn-delete-item btn-delete-cart text-center ms-2" data-url="/carts/delete/?id=@item.Id"><i
+										class="bi bi-x-lg"></i>
+								</span>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+
+		<div class="w-100">
+			<div class="fw-bold text-end fs-3 my-3">
+				Tổng tiền: @string.Format("{0:N0}", ViewData["amount"]) VNĐ
+			</div>
+			<div class="text-end mb-5">
+				<button class="btn" id="btn-checkout">Thanh toán</button>
+			</div>
+		</div>
+
+	</div>
+}
+else
+{
+	<div class="container text-center mb-5">
+		<img src="/images/characters/yasuo.png" alt="">
+		<div>Chưa có gì trong giỏ hàng.</div>
+	</div>
+}
+<div class="modal-checkout row m-0" style="display: none" id="modal-checkout-first">
+	<div class="modal-checkout-wrapper d-flex flex-column col-10 col-sm-10 col-md-8 col-lg-6">
+		<div class="mb-auto">
+			<div class="fs-3 fw-bold">Mã giảm giá</div>
+			<div class="text-white-50 mb-3">Nhập vào mã giảm giá</div>
+			<div class="row">
+				<div class="col">
+					<input type="text" class="w-100" id="coupon">
+				</div>
+				<div class="col">
+					<button class="btn w-100 btn-simple" id="btn-apply-code">Áp dụng</button>
+				</div>
+			</div>
+			<div class="my-3" id="code-error"></div>
+			<div class="fs-3 fw-bold">Chi tiết thanh toán</div>
+			<div class="d-flex justify-content-between">
+				<span>Giá</span> <span>@string.Format("{0:N0}", ViewData["amount"]) VNĐ</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span>Giảm giá</span> <span id="coupon-discount"></span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span>Số acc mua</span> <span>@Model.Count().ToString("D2")</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span>Bảo hành</span> <span>07 ngày</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span></span> <span>______________</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span>Tổng số tiền</span> <span class="total-amount">@string.Format("{0:N0}", ViewData["amount"]) VNĐ</span>
+			</div>
+			<hr>
+			<div class="d-flex justify-content-between">
+				<span>Tài khoản của bạn</span> <span id="your-account">@string.Format("{0:N0}", ViewData["your-money"])
+					VNĐ</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span>Số tiền thanh toán</span> <span class="total-amount">@string.Format("{0:N0}", ViewData["amount"])
+					VNĐ</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span></span> <span>______________</span>
+			</div>
+			<div class="d-flex justify-content-between">
+				<span>Số tiền còn lại: </span> <span id="remaining-money">@formattedAmount VNĐ</span>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col">
+				<div class="btn btn-border w-100 btn-checkout-cancel">Huỷ bỏ</div>
+			</div>
+			<div class="col">
+				<div class="btn w-100" id="btn-checkout-first">Thanh toán</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@* <div class="modal-checkout" id="modal-checkout-second" style="display: none">
+<div class="modal-checkout-wrapper d-flex flex-column">
+<div class="mb-auto">
+<div class="mb-3">
+<span class="nameInput">Chủ tài khoản </span>
+<div class="confirm">
+<input type="text" class="w-100" placeholder="NGUYEN VAN QUY" style="pointer-events: none;">
+</div>
+</div>
+<div class="mb-3">
+<span class="nameInput">Số tài khoản </span>
+<div class="confirm">
+<input type="text" class="w-100" placeholder="0560118908002" style="pointer-events: none;">
+</div>
+</div>
+<div class="mb-3">
+<span class="nameInput">Ngân hàng </span>
+<div class="confirm">
+<input type="text" class="w-100" placeholder="Ngân hàng MBBank Chi nhánh Hoàng Quốc Việt" style="pointer-events: none;">
+</div>
+</div>
+<div class="my-3">Hoặc quét mã QR</div>
+<div style="width:100%; height: 200px" class="text-center d-flex justify-content-center mb-3">
+<img src="/images/QR.png" alt="" class="img-thumbnail">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="btn btn-border w-100" id="btn-checkout-cancel">Huỷ bỏ</div>
+</div>
+<div class="col">
+<div class="btn w-100">Chuyển khoản</div>
+</div>
+</div>
+</div>
+</div> *@
+@section js {
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script type="module" src="/js/cart.js"></script>
+	<script>
+		let amount = @ViewData["amount"];
+		let yourMoney = @ViewData["your-money"];
+		let totalAmount = amount;
+	</script>
+}

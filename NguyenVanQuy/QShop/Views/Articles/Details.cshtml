@@ -1,0 +1,52 @@
+@using QShop.Models;
+@model QShop.Models.ViewModels.ArticleViewModel;
+
+@{
+	ViewData["Title"] = "Blog | QShop";
+	Layout = "_Layout";
+	dynamic result = ViewData["result"];
+}
+
+@section css {
+	<link rel="stylesheet" href="/css/article.css" />
+	<link rel="stylesheet" href="/css/pagination.css" />
+}
+<div class="article">
+	<div class="container-fluid p-0" style="margin-top: 66px">
+		<div class="hero_marketplace bg_white">
+			<div class="container text-center">
+				<h1 class="text-center text-uppercase">@Model.Article.Title</h1>
+				<span class="page-date">@Model.Article.CreatedAt.ToString("dd/MM/yyyy")</span>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="news-row row">
+			<div class="news-content mb-5 col-12 col-sm-12 col-md-8 col-lg-8"">
+			@Html.Raw(Model.Article.Content)
+			</div>
+			<div class=" news-sidebar col-12 col-sm-12 col-md-4 col-lg-4"">
+				<h3>Các bài viết khác</h3>
+				<div class="posts-sl">
+					<div class="posts-row">
+						@foreach (var item in @Model.Articles)
+						{
+							<div class="posts-col">
+								<div class="posts-wrap">
+									<div class="posts-img"><a href="/articles/details/?id=@item.Id"><img src="@item.Thumbnail"
+												title="free lol skins"></a></div>
+									<span class="posts-date">@item.CreatedAt.ToString("dd/MM/yyyy")</span>
+									<span class="posts-name"><a href="https://happysmurf.com/blog/free-lol-skins/">@item.Title</a></span>
+									<p>@item.Description</p>
+									<a href="/articles/details/?id=@item.Id" class="posts-link"><i class="bi bi-chevron-double-right"></i>
+										Đọc
+										thêm</a>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

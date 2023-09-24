@@ -1,0 +1,25 @@
+﻿@model IEnumerable<QShop.Models.ReviewViewModel>
+
+@foreach (var item in Model)
+{
+	<div class="testimonials-wrap mb-2">
+		<div class="testimonials-top row">
+			<div class="testimonials-img col-6 col-sm-3 col-md-2 col-lg-2">
+				<div class="ratio ratio-1x1">
+					<img alt="" src="@item.Review.user.Thumbnail" class="avatar avatar-122 photo avatar-default" height="122"
+						width="122" title="rate" loading="lazy" decoding="async">
+				</div>
+			</div>
+			<div class="row justify-content-between col-6 col-sm-9 col-md-10 col-lg-10">
+				<div class="col-12 col-sm-8 col-md-8 col-lg-8">
+					<span class="testimonials-name">@item.Review.user?.UserName</span>
+					<div class="stars">
+						@Html.Raw(item.Rating)
+					</div>
+				</div>
+				<span class="testimonials-date col-1 col-sm-4 col-md-4 col-lg-4 text-end">@item.TimeAgo</span>
+			</div>
+		</div>
+		<p>@item.Review.Content</p>
+	</div>
+}
