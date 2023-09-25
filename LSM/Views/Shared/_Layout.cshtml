@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LSM.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/bootstrap53.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Datacss.css" asp-append-version="true" />
+
+    <script>new DataTable('#example');</script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });</script>
 </head>
 <body>
     <header>
@@ -50,9 +58,13 @@
             &copy; 2023 - LSM - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.js" asp-append-version="true"></script>
+    <script src="~/js/jquerybt.js" asp-append-version="true"></script>
+    <script src="~/js/jqueryDatatable.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
