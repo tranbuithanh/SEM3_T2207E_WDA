@@ -13,90 +13,99 @@ using System.Data;
 namespace BTTH.Views
 {
     [Authorize(Roles = "Administrator")]
-
+  
     [Authorize(Roles = "Admin")]
     [Authorize(Roles = "Teacher")]
-    public class SubjectClsController : Controller
+    public class STDbiosController : Controller
     {
         private readonly BTTHMVCContext _context;
 
-        public SubjectClsController(BTTHMVCContext context)
+        public STDbiosController(BTTHMVCContext context)
         {
             _context = context;
         }
 
-        // GET: SubjectCls
+        // GET: STDbios
         public async Task<IActionResult> Index()
         {
-              return _context.SubjectCls != null ? 
-                          View(await _context.SubjectCls.ToListAsync()) :
-                          Problem("Entity set 'BTTHMVCContext.SubjectCls'  is null.");
+              return _context.STDbio != null ? 
+                          View(await _context.STDbio.ToListAsync()) :
+                          Problem("Entity set 'BTTHMVCContext.STDbio'  is null.");
         }
 
-        // GET: SubjectCls/Details/5
+        // GET: STDbios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.SubjectCls == null)
+            if (id == null || _context.STDbio == null)
             {
                 return NotFound();
             }
 
-            var subjectCls = await _context.SubjectCls
-                .FirstOrDefaultAsync(m => m.Sbjid == id);
-            if (subjectCls == null)
+            var sTDbio = await _context.STDbio
+                .FirstOrDefaultAsync(m => m.STDbioId == id);
+            if (sTDbio == null)
             {
                 return NotFound();
             }
 
-            return View(subjectCls);
+            return View(sTDbio);
         }
 
-        // GET: SubjectCls/Create
+        // GET: STDbios/Create
         public IActionResult Create()
         {
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName" );
+            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName" );
+
             return View();
         }
 
-        // POST: SubjectCls/Create
+        // POST: STDbios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Sbjid,SbjName,SbjDescription,SbjOrder")] SubjectCls subjectCls)
+        public async Task<IActionResult> Create([Bind("STDbioId,Sbjid,Stdid,ExamMark,Progress,Status")] STDbio sTDbio)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(subjectCls);
+                _context.Add(sTDbio);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(subjectCls);
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", sTDbio.Sbjid);
+            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName", sTDbio.Stdid);
+
+            return View(sTDbio);
         }
 
-        // GET: SubjectCls/Edit/5
+        // GET: STDbios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.SubjectCls == null)
+            if (id == null || _context.STDbio == null)
             {
                 return NotFound();
             }
 
-            var subjectCls = await _context.SubjectCls.FindAsync(id);
-            if (subjectCls == null)
+            var sTDbio = await _context.STDbio.FindAsync(id);
+            if (sTDbio == null)
             {
                 return NotFound();
             }
-            return View(subjectCls);
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", sTDbio.Sbjid);
+            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName", sTDbio.Stdid);
+
+            return View(sTDbio);
         }
 
-        // POST: SubjectCls/Edit/5
+        // POST: STDbios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Sbjid,SbjName,SbjDescription,SbjOrder")] SubjectCls subjectCls)
+        public async Task<IActionResult> Edit(int id, [Bind("STDbioId,Sbjid,Stdid,ExamMark,Progress,Status")] STDbio sTDbio)
         {
-            if (id != subjectCls.Sbjid)
+            if (id != sTDbio.STDbioId)
             {
                 return NotFound();
             }
@@ -105,12 +114,12 @@ namespace BTTH.Views
             {
                 try
                 {
-                    _context.Update(subjectCls);
+                    _context.Update(sTDbio);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SubjectClsExists(subjectCls.Sbjid))
+                    if (!STDbioExists(sTDbio.STDbioId))
                     {
                         return NotFound();
                     }
@@ -121,49 +130,52 @@ namespace BTTH.Views
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(subjectCls);
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", sTDbio.Sbjid);
+            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName", sTDbio.Stdid);
+
+            return View(sTDbio);
         }
 
-        // GET: SubjectCls/Delete/5
+        // GET: STDbios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.SubjectCls == null)
+            if (id == null || _context.STDbio == null)
             {
                 return NotFound();
             }
 
-            var subjectCls = await _context.SubjectCls
-                .FirstOrDefaultAsync(m => m.Sbjid == id);
-            if (subjectCls == null)
+            var sTDbio = await _context.STDbio
+                .FirstOrDefaultAsync(m => m.STDbioId == id);
+            if (sTDbio == null)
             {
                 return NotFound();
             }
 
-            return View(subjectCls);
+            return View(sTDbio);
         }
 
-        // POST: SubjectCls/Delete/5
+        // POST: STDbios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.SubjectCls == null)
+            if (_context.STDbio == null)
             {
-                return Problem("Entity set 'BTTHMVCContext.SubjectCls'  is null.");
+                return Problem("Entity set 'BTTHMVCContext.STDbio'  is null.");
             }
-            var subjectCls = await _context.SubjectCls.FindAsync(id);
-            if (subjectCls != null)
+            var sTDbio = await _context.STDbio.FindAsync(id);
+            if (sTDbio != null)
             {
-                _context.SubjectCls.Remove(subjectCls);
+                _context.STDbio.Remove(sTDbio);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SubjectClsExists(int id)
+        private bool STDbioExists(int id)
         {
-          return (_context.SubjectCls?.Any(e => e.Sbjid == id)).GetValueOrDefault();
+          return (_context.STDbio?.Any(e => e.STDbioId == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,0 +1,63 @@
+﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/BTTH.styles.css" asp-append-version="true" />
+@model IEnumerable<BTTH.Models.STDbio>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassroomID.SbjName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentID.StdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExamMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Progress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.ClassroomID.SbjName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.StudentID.StdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExamMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Progress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.STDbioId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.STDbioId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.STDbioId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -2,11 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using BTTH.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BTTHMVCContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BTTHMVCContext") ?? throw new InvalidOperationException("Connection string 'BTTHMVCContext' not found.")));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<BTTHMVCContext>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

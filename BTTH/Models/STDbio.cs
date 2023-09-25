@@ -10,21 +10,21 @@ namespace BTTH.Models
 
         [ForeignKey("Sbjid")]
         [Display(Name = "Subject")]
-        //public int? Sbjid { get; set; }
-        public SubjectCls SubjectCls { get; set; }
+        public int  Sbjid { get; set; }
+        public SubjectCls ClassroomID { get; set; }
         [ForeignKey("Stdid")]
         [Display(Name = "Student ")]
-       // public int? Stdid { get; set; }
+       public int  Stdid { get; set; }
 
-        public Student Students { get; set; }
+         public Student StudentID { get; set; }
        
 
         [Required]
         public int? ExamMark { get; set; }
-        [Required]
-        public DateTime? DateStart { get; set; }
-        [Required]
-        public DateTime? DateEnd { get; set; }
+       // [Required]
+       // public DateOnly DateStart { get; set; }
+        //[Required]
+       // public DateOnly DateEnd { get; set; }
         [Required]
         public int? Progress { get; set;}
 

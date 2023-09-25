@@ -1,0 +1,56 @@
+﻿@model BTTH.Models.Student
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StdName" class="control-label"></label>
+                <input asp-for="StdName" class="form-control" />
+                <span asp-validation-for="StdName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StdBirth" class="control-label"></label>
+                <input asp-for="StdBirth" class="form-control" />
+                <span asp-validation-for="StdBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StdTel" class="control-label"></label>
+                <input asp-for="StdTel" class="form-control" />
+                <span asp-validation-for="StdTel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StdAdr" class="control-label"></label>
+                <input asp-for="StdAdr" class="form-control" />
+                <span asp-validation-for="StdAdr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StdImg" class="control-label"></label>
+                <input asp-for="StdImg" class="form-control" />
+                <span asp-validation-for="StdImg" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Clsid" class="control-label"></label>
+                <select asp-for="Clsid" class="form-control" asp-items="ViewBag.Clsid"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

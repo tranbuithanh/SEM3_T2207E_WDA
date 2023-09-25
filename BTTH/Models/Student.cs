@@ -20,9 +20,9 @@ namespace BTTH.Models
         
         [ForeignKey("Clsid")]
         [Display(Name = "Class")]
-        //public int Clsid { get; set; }
+          public int Clsid { get; set; }
 
-        public  ClassCourse Classroomid { get; set; }
+        public   ClassCourse Clsroom { get; set; }
 
         public virtual ICollection<STDbio>? StudentBio { get; set; }
 

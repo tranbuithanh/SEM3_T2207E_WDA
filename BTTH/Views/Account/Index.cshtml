@@ -5,10 +5,51 @@
 }
 
    @if (User.Identity.IsAuthenticated){
+<div>
 
-<h1>Welcome to Profile </h1>
-<h2><a href="/Account/Logout">Log Out</a></h2>
+        <div class="w3-row-padding w3-margin-bottom">
+        <div class="w3-quarter">
+            <div class="w3-container w3-blue w3-padding-16">
+                <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+                <div class="w3-right">
+                        <h4>Welcome to</h4>
+                        <h4> AdminPage</h4>
+                </div>
+                <div class="w3-clear"></div>
+                 
+            </div>
+        </div>
+        <div class="w3-quarter">
+            <div class="w3-container w3-orange w3-text-white w3-padding-16">
+                <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+                <div class="w3-right">
+                    <br>
+                    <br>
+                        <h3> <a href="/Account/Logout">Log Out</a> </h3>
+                </div>
+                <div class="w3-clear"></div>
+               
+            </div>
+        </div>
+
+        </div>
+    </div>
    }else
    {
-<h1>Please <a href="/Account/Login">Login </a> </h1>
+       <div>
+        <div class="w3-quarter">
+            <div class="w3-container w3-orange w3-text-white w3-padding-16">
+                <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+                <div class="w3-right">
+                    <h1>Please <a href="/Account/Login">Login </a> </h1>
+                </div>
+                <div class="w3-clear"></div>
+                
+            </div>
+        </div>
+           
+
+
+
+    </div>
    }

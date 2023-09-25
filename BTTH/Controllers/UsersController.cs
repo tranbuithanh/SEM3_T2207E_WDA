@@ -11,7 +11,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BTTH.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    //[Authorize(Roles = "Administrator")]
+   // [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Teacher")]
     public class UsersController : Controller
     {
         private readonly BTTHMVCContext _context;

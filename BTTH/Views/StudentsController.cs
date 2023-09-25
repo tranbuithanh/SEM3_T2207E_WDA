@@ -15,88 +15,93 @@ namespace BTTH.Views
     [Authorize(Roles = "Administrator")]
 
     [Authorize(Roles = "Admin")]
-    [Authorize(Roles = "Teacher")]
-    public class SubjectClsController : Controller
+     
+    public class StudentsController : Controller
     {
         private readonly BTTHMVCContext _context;
 
-        public SubjectClsController(BTTHMVCContext context)
+        public StudentsController(BTTHMVCContext context)
         {
             _context = context;
         }
 
-        // GET: SubjectCls
+        // GET: Students
         public async Task<IActionResult> Index()
         {
-              return _context.SubjectCls != null ? 
-                          View(await _context.SubjectCls.ToListAsync()) :
-                          Problem("Entity set 'BTTHMVCContext.SubjectCls'  is null.");
+              return _context.Student != null ? 
+                          View(await _context.Student.ToListAsync()) :
+                          Problem("Entity set 'BTTHMVCContext.Student'  is null.");
         }
 
-        // GET: SubjectCls/Details/5
+        // GET: Students/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.SubjectCls == null)
+            if (id == null || _context.Student == null)
             {
                 return NotFound();
             }
 
-            var subjectCls = await _context.SubjectCls
-                .FirstOrDefaultAsync(m => m.Sbjid == id);
-            if (subjectCls == null)
+            var student = await _context.Student
+                .FirstOrDefaultAsync(m => m.Stdid == id);
+            if (student == null)
             {
                 return NotFound();
             }
 
-            return View(subjectCls);
+            return View(student);
         }
 
-        // GET: SubjectCls/Create
+        // GET: Students/Create
         public IActionResult Create()
         {
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName");
             return View();
+            
         }
 
-        // POST: SubjectCls/Create
+        // POST: Students/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Sbjid,SbjName,SbjDescription,SbjOrder")] SubjectCls subjectCls)
+        public async Task<IActionResult> Create([Bind("Stdid,StdName,StdBirth,StdTel,StdAdr,StdImg,Clsid")] Student student)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(subjectCls);
+                _context.Add(student);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(subjectCls);
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", student.Clsid);
+            return View(student);
         }
 
-        // GET: SubjectCls/Edit/5
+        // GET: Students/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.SubjectCls == null)
+            if (id == null || _context.Student == null)
             {
                 return NotFound();
             }
 
-            var subjectCls = await _context.SubjectCls.FindAsync(id);
-            if (subjectCls == null)
+            var student = await _context.Student.FindAsync(id);
+            if (student == null)
             {
                 return NotFound();
             }
-            return View(subjectCls);
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", student.Clsid);
+
+            return View(student);
         }
 
-        // POST: SubjectCls/Edit/5
+        // POST: Students/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Sbjid,SbjName,SbjDescription,SbjOrder")] SubjectCls subjectCls)
+        public async Task<IActionResult> Edit(int id, [Bind("Stdid,StdName,StdBirth,StdTel,StdAdr,StdImg,Clsid")] Student student)
         {
-            if (id != subjectCls.Sbjid)
+            if (id != student.Stdid)
             {
                 return NotFound();
             }
@@ -105,12 +110,12 @@ namespace BTTH.Views
             {
                 try
                 {
-                    _context.Update(subjectCls);
+                    _context.Update(student);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SubjectClsExists(subjectCls.Sbjid))
+                    if (!StudentExists(student.Stdid))
                     {
                         return NotFound();
                     }
@@ -121,49 +126,51 @@ namespace BTTH.Views
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(subjectCls);
+            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", student.Clsid);
+
+            return View(student);
         }
 
-        // GET: SubjectCls/Delete/5
+        // GET: Students/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.SubjectCls == null)
+            if (id == null || _context.Student == null)
             {
                 return NotFound();
             }
 
-            var subjectCls = await _context.SubjectCls
-                .FirstOrDefaultAsync(m => m.Sbjid == id);
-            if (subjectCls == null)
+            var student = await _context.Student
+                .FirstOrDefaultAsync(m => m.Stdid == id);
+            if (student == null)
             {
                 return NotFound();
             }
 
-            return View(subjectCls);
+            return View(student);
         }
 
-        // POST: SubjectCls/Delete/5
+        // POST: Students/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.SubjectCls == null)
+            if (_context.Student == null)
             {
-                return Problem("Entity set 'BTTHMVCContext.SubjectCls'  is null.");
+                return Problem("Entity set 'BTTHMVCContext.Student'  is null.");
             }
-            var subjectCls = await _context.SubjectCls.FindAsync(id);
-            if (subjectCls != null)
+            var student = await _context.Student.FindAsync(id);
+            if (student != null)
             {
-                _context.SubjectCls.Remove(subjectCls);
+                _context.Student.Remove(student);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SubjectClsExists(int id)
+        private bool StudentExists(int id)
         {
-          return (_context.SubjectCls?.Any(e => e.Sbjid == id)).GetValueOrDefault();
+          return (_context.Student?.Any(e => e.Stdid == id)).GetValueOrDefault();
         }
     }
 }

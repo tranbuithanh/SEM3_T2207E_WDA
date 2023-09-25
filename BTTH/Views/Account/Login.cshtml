@@ -105,7 +105,7 @@ span.psw {
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_adminlayout.cshtml";
 }
-<div>
+<div >
 @using (Html.BeginForm("Login","Account",FormMethod.Post))
 {
     if (ViewBag.LoginStatus != null && ViewBag.LoginStatus == 0)
@@ -131,7 +131,7 @@ span.psw {
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button"  href="/Home" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
  

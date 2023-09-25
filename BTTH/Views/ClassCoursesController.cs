@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BTTH.Data;
 using BTTH.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace BTTH.Views
 {
+    [Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "Admin")] 
     public class ClassCoursesController : Controller
     {
         private readonly BTTHMVCContext _context;
