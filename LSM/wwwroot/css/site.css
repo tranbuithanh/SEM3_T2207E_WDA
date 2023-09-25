@@ -19,4 +19,16 @@ html {
 
 body {
   margin-bottom: 60px;
+
+}
+
+.hmpage {
+    background-image: url('https://img.freepik.com/free-photo/abundant-collection-antique-books-wooden-shelves-generated-by-ai_188544-29660.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:500px;
+}
+.wel{
+    color: White;
 }
