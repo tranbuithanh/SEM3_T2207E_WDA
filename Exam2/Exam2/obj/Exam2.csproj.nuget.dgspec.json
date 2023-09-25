@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\Exam2\\Exam2\\Exam2.csproj": {}
+    "C:\\Demo\\SEM3_T2207E_WDA\\Exam2\\Exam2\\Exam2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\Exam2\\Exam2\\Exam2.csproj": {
+    "C:\\Demo\\SEM3_T2207E_WDA\\Exam2\\Exam2\\Exam2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Exam2\\Exam2\\Exam2.csproj",
+        "projectUniqueName": "C:\\Demo\\SEM3_T2207E_WDA\\Exam2\\Exam2\\Exam2.csproj",
         "projectName": "Exam2",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\Exam2\\Exam2\\Exam2.csproj",
+        "projectPath": "C:\\Demo\\SEM3_T2207E_WDA\\Exam2\\Exam2\\Exam2.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\Exam2\\Exam2\\obj\\",
+        "outputPath": "C:\\Demo\\SEM3_T2207E_WDA\\Exam2\\Exam2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
