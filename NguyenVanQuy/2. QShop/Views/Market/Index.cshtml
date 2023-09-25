@@ -1,0 +1,603 @@
+﻿@{
+    ViewData["Title"] = "Market | Qshop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css {
+    <link rel="stylesheet" href="/css/market.css" />
+    <link rel="stylesheet" href="/css/pagination.css" />
+}
+
+<div class="container-fluid p-0" style="margin-top: 66px">
+    <div class="hero_marketplace bg_white">
+        <div class="container">
+            <h1 class="text-center text-uppercase">
+							@{
+							switch(ViewData["slug"]?.ToString())
+							{
+									case "lien-minh-huyen-thoai":
+											// Use the text block below to separate html elements from code
+											<text>Tài khoản Liên Minh Huyền Thoại</text>
+											break;  // Always break each case
+									case "valorant":
+											<text>
+													Tài khoản Valorant
+											</text>
+											break;
+									case "overwatch-2":
+											<text>
+													Tài khoản Overwatch 2
+											</text>
+											break;
+									case "toc-chien":
+											<text>
+													Tài khoản Tốc Chiến
+											</text>
+											break;
+									case "dau-truong-chan-ly":
+											<text>
+													Tài khoản Đấu Trường Chân Lý
+											</text>
+											break;
+									default:
+											<text>
+													Tài khoản game tại QShop
+											</text>
+											break;                   
+							}
+					}
+					</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <a href="/home/index" class="btn btn-white btn-simple btn-sm my-4">
+        <i class="bi bi-house"></i> Về trang chủ
+    </a>
+    <div class="">
+        <ul class="market-game-all show row" data-bs-popper="none">
+						@await Component.InvokeAsync("MarketGames")
+        </ul>
+    </div>
+    <div class="row my-4">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3 mb-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex justify-content-between" style="padding: 10px 20px">
+                        <button class="btn btn-simple m-0" id="btn-filter"><i class="bi bi-check2"></i> <span class="d-none d-lg-block">Áp dụng</span></button>
+                        <button class="btn btn-simple m-0" id="btn-filter-reset"><i class="bi bi-arrow-clockwise"></i> <span class="d-none d-lg-block">Reset</span></button>
+                    </h2>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#order-filter-form"
+                                aria-expanded="true"
+                                aria-controls="order-filter-form">
+                            <i class="bi bi-sort-down"></i> 
+														<span class="me-auto">Sắp xếp theo</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="order-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingOne"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="order" value="newest" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Mới nhất</span>
+
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="order" value="oldest" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Cũ nhất</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="order" value="price-desc" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Giá: Cao đến thấp</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="order" value="price-asc" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Giá: Thấp đến cao</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="order" value="rank-desc" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Rank: Cao đến thấp</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="order" value="rank-asc" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Rank: Thấp đến cao</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#champion-filter-form"
+                                aria-expanded="true"
+                                aria-controls="champion-filter-form">
+                            <i class="bi bi-people-fill"></i>
+														<span class="me-auto">Tướng</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="champion-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingTwo"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="champion" value="0-20" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">0-20 tướng</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="champion" value="20-50" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">20-50 tướng</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="champion" value="50-100" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">50-100 tướng</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="champion" value="100-150" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">100-150 tướng</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="champion" value="150-200" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">150 + tướng</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#level-filter-form"
+                                aria-expanded="true"
+                                aria-controls="level-filter-form">
+                            <i class="bi bi-sort-numeric-up"></i>
+														<span class="me-auto">Level</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="level-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingThree"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="level" value="30-50" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">30-50 level</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="level" value="50-100" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">50-100 level</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="level" value="100-200" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">100-200 level</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="level" value="200-1000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">200+ level</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#skin-filter-form"
+                                aria-expanded="true"
+                                aria-controls="skin-filter-form">
+                            <i class="bi bi-robot"></i>
+														<span class="me-auto">Skins</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="skin-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingFour"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="skin" value="20-50" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">20-50 skins</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="skin" value="50-100" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">50-100 skins</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="skin" value="100-200" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">100-200 skins</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="skin" value="200-2000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">200+ skins</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#rp-filter-form"
+                                aria-expanded="true"
+                                aria-controls="rp-filter-form">
+                            <i class="bi bi-cash-coin"></i>
+														<span class="me-auto">RP</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="rp-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingFive"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="rp" value="400-1000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">400-1000 RP</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="rp" value="1000-4000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">1000-4000 RP</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="rp" value="4000-10000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">4000-10000 RP</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="rp" value="10000-20000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">10000-20000 RP</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="rp" value="20000-100000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">20000+ RP</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#essence-filter-form"
+                                aria-expanded="true"
+                                aria-controls="essence-filter-form">
+                            <i class="bi bi-gem"></i>
+														<span class="me-auto">Tinh hoa lam</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="essence-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingSix"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="essence" value="10-30" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">10000-30000 THL</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="essence" value="30-60" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">30000-60000 THL</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="essence" value="60-100" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">60000-100000 THL</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="essence" value="100-1000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">100000+ THL</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#price-filter-form"
+                                aria-expanded="true"
+                                aria-controls="price-filter-form">
+                            <i class="bi bi-coin"></i>
+														<span class="me-auto">Giá</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="price-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingSeven"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="price" value="0-50" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">0-50000 VNĐ</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="price" value="50-100" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">50000-100000 VNĐ</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="price" value="100-200" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">100000-200000 VNĐ</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="price" value="200-500" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">200000-500000 VNĐ</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="price" value="500-1000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">500000-1000000 VNĐ</span>
+                                    </label>
+                                </li>
+                                <li class="filter-item" style="max-height: 27px">
+                                    <label class="checkbox-control">
+                                        <input type="radio" class="radio" name="price" value="1000-100000" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">1000000+ VNĐ</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#rank-filter-form"
+                                aria-expanded="true"
+                                aria-controls="rank-filter-form">
+                            <i class="bi bi-controller"></i>
+														<span class="me-auto">Rank</span>
+														<span class="group-count" style="display: none;">
+															<i class="bi bi-check"></i>
+														</span>
+                        </button>
+                    </h2>
+                    <form id="rank-filter-form"
+												class="accordion-collapse collapse hidden"
+												aria-labelledby="headingEight"
+												data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="1" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Sắt</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="2" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Đồng</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="3" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Bạc</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="4" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Vàng</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="5" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Bạch kim</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="6" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Lục bảo</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="7" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Kim Cương</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="8" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Cao thủ</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="9" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Đại cao thủ</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-control">
+                                        <input type="checkbox" name="rank" value="10" hidden />
+                                        <div class="checkbox-box"></div>
+                                        <span class="filter-item-label">Thách đấu</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+				<div class="col-12 col-sm-12 col-md-8 col-lg-9">
+					<div class="row" id="accounts-result">
+					</div>
+				</div>
+@*Card result*@
+    </div>
+</div>
+
+@*Paginate*@
+<div  class="container mb-5">
+    <div id="pagination" class="justify-content-end"></div>
+</div>
+
+
+@section js {
+    <script src="/js/pagination.js"></script>
+		<script>
+			var game = '@ViewData["slug"]';
+		</script>
+    <script type="module" src="/js/market.js"></script>
+
+}

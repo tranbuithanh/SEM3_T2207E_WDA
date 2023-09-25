@@ -1,0 +1,65 @@
+@model QShop.Models.Article
+@{
+	ViewData["Title"] = "Bài viết | Qshop";
+	ViewData["Page"] = "articles";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section css {
+	<link rel="stylesheet" href="/css/customSelect2.css">
+}
+<div class="hero_marketplace-admin bg_white">
+	<div class="container">
+		<h1 class="text-center text-uppercase">THÊM BÀI VIẾT</h1>
+	</div>
+</div>
+<form method="post" class="w-75 mx-auto form-main" action="/admin/articles/create" enctype="multipart/form-data">
+	@Html.AntiForgeryToken()
+	<div class="d-flex flex-column">
+		<div class="mb-3">
+			<span class="nameInput">Tiêu đề bài viết </span>
+			<div class="confirm">
+				<input type="text" class="w-100" placeholder="Tiêu đề bài viết" name="Title" value="@Model.Title" />
+			</div>
+			<span asp-validation-for="Title" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<span class="nameInput">Mô tả ngắn </span>
+			<div class="confirm">
+				<textarea name="Description" id="Description" class="w-100"
+					style="resize: none; height: 100px">@Model.Description</textarea>
+			</div>
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		<span class="nameInput mb-2">Thumbnail </span>
+		<div class="blog-img w-100" style="height: 365px;">
+			<img src="@Model.Thumbnail" id="previewImage" class="card-img-top" style="height: 100%; object-fit: cover" />
+			<label for="ImageUpload" class="blog-img-backdrop">
+				<i class="bi bi-camera-fill"></i>
+			</label>
+			<input type="file" id="ImageUpload" name="ImageUpload" hidden>
+			@* <input type="text" id="Id" name="Id" value="@Model.Id" hidden> *@
+			@* <input type="text" id="Thumbnail" name="Thumbnail" value="@Model.Thumbnail" hidden> *@
+		</div>
+		<div class="space-y-10 mt-3">
+			<span class="nameInput">Nội dung bài viết </span>
+			<div class="confirm">
+				<div id="toolbar-container"></div>
+				<textarea id="content" name="content">@Model.Content</textarea>
+			</div>
+		</div>
+		<span asp-validation-for="Content" class="text-danger"></span>
+		<div class="text-end mt-3">
+			<a class="btn btn-simple" href="/admin/coupons">Huỷ bỏ</a>
+			<button class="btn" type="submit">Save</button>
+		</div>
+	</div>
+	</div>
+</form>
+
+@section js {
+	<script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
+	<script type="module" src="/admin/js/article.js"></script>
+	<script>
+	</script>
+}

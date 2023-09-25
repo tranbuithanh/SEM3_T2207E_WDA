@@ -1,0 +1,11 @@
+@model IEnumerable<QShop.Models.Game>
+
+@foreach (var item in Model)
+{
+	<li class="col-12 col-sm-12 col-md-4 col-lg p-0">
+		<a class='market-game-item @(ViewData["slug"]?.ToString() == item.Slug ? "active" : "")'
+			href="/market/?game=@item.Slug">
+			<img data-v-69836fc1="" class="w-6 h-6 mr-2" src="@item.Logo" />@item.Name
+		</a>
+	</li>
+}

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<QShop.Models.Account>
+
+@foreach (var item in Model)
+{
+	<div class="card-item mb-3 col-12 col-sm-12 col-md-6 col-lg-4">
+		<div class="card-item-wrapper">
+			<div class="card-item-view-detail">
+				<div class="d-flex flex-column">
+					<button class="btn my-1 btn-cart-create" data-url="/carts/create/?account=@item.Id"><i
+							class="bi bi-bag-plus"></i> Thêm vào Giỏ hàng</button>
+					<a href="/accounts/details/?id=@item.Id" class="btn my-1 btn-account-details"><i class="bi bi-list"></i> Xem chi
+						tiết</a>
+				</div>
+			</div>
+			<div class="position-relative card-item-main">
+				<img class="item_img" src="/images/yasuo-thumbnail.jpg" alt="100,000+ Blue Essence Unranked Smurf - EUW" />
+				<div class="card-cover">
+					<div class="card-cover-top">
+						<div class="card-cover-icon-sm"><img src="/images/Riot_icon.webp" /> @item.PrimaryPoint</div>
+						<div class="card-cover-icon-sm">@item.SecondaryPoint.ToString("N0")+ <img src="/images/BE_icon.webp" /></div>
+					</div>
+					<div class="card-cover-center flex-fill">
+						<img src="@item.rank?.Thumbnail" alt="Silver" class="w-8" />
+					</div>
+					<div class="card-cover-bottom">
+						<div>
+							<span class="card-cover-icon-sm"><img src="/images/lol-champion.png" /></span>
+							<span class="text-secondary">Tướng</span>
+							<span>@item.Champion</span>
+						</div>
+						<div>
+							<span class="card-cover-icon-sm"><img src="/images/Skin.png" /></span>
+							<span class="text-secondary">Skin</span>
+							<span>@item.Skin</span>
+						</div>
+						<div>
+							<span class="card-cover-icon-sm"><img src="/images/Level.png" /></span>
+							<span class="text-secondary">Level</span>
+							<span>@item.Grade</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-item-desc">
+				<h4 class="my-3">#Acc @item.Id @item.Description</h4>
+				<div class="d-flex justify-content-evenly" style="border-bottom: 1px solid #ffffff1a; padding-bottom: 10px">
+					<a class="btn" href="/accounts/detail/?id=@item.Id"><i class="bi bi-list"></i>Xem chi tiết</a>
+				</div>
+				<div class="ps-3">
+					<div class="text-start mt-2">
+						<i class="bi bi-coin bi-blue"></i> <span class="text-secondary">Giá</span>
+						<span>@item.Price.ToString("N0")₫
+						</span>
+					</div>
+					<div class="text-start mt-2">
+						<i class="bi bi-gem bi-blue"></i> <span class="text-secondary">Tinh hoa lam</span>
+						<span>@item.SecondaryPoint.ToString("N0")+</span>
+					</div>
+					<div class="text-start my-2">
+						<i class="bi bi-list-ol bi-blue"></i> <span class="text-secondary">Level</span> <span>@item.Grade</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}

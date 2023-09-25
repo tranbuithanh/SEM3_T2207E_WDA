@@ -1,0 +1,86 @@
+@model QShop.Models.Game
+@{
+	ViewData["Title"] = "Games | Qshop";
+	ViewData["Page"] = "games";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="hero_marketplace-admin bg_white">
+	<div class="container">
+		<h1 class="text-center text-uppercase">THÊM GAME</h1>
+	</div>
+</div>
+<div class="row w-75 mx-auto form-main">
+	<div class="col-6 text-center d-flex flex-column align-items-center">
+		<button class="btn btn-simple my-3" style="min-width: min-content">
+			<img class="w-6 h-6 mr-2" src="/images/games/league-of-legends-logo.svg" style="width: 25px"
+				id="previewImageLogo">
+			<span class="name-game-preview">Liên Minh Huyền Thoại</span>
+		</button>
+		<a class="card col w-75" href="#">
+			<img class="card-img-top" src="/images/games/league-of-legends-thumbnail.webp" alt="Card image"
+				id="previewImageCard">
+			<div class="card-body">
+				<h4 class="card-title" style="top: -120px;">
+					<img src="/images/games/league-of-legends-card-logo.webp" alt="" id="previewImageCardText">
+				</h4>
+				<p class="card-text name-game-preview">Liên Minh Huyền Thoại</p>
+			</div>
+		</a>
+	</div>
+	<div class="col-6 d-flex flex-column">
+		<form method="post" action="/admin/games/create" enctype="multipart/form-data" class="m-0">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			@Html.AntiForgeryToken()
+			<div class="mb-3">
+				<span class="nameInput">Tên game </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="Tên game" name="Name" id="Name" value="@Model.Name">
+				</div>
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Mô tả </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="Mô tả ngắn" name="Description" value="@Model.Description">
+				</div>
+				<span asp-validation-for="Description" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Slug </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="Slug" name="Slug" value="@Model.Slug">
+				</div>
+				<span asp-validation-for="Slug" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Card </span>
+				<div class="confirm">
+					<input type="file" class="w-100" placeholder="Card Image" name="ImageUploadCard" id="ImageUploadCard">
+				</div>
+				<span asp-validation-for="ImageUploadCard" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Card text </span>
+				<div class="confirm">
+					<input type="file" class="w-100" placeholder="Card Text" name="ImageUploadCardText" id="ImageUploadCardText">
+				</div>
+				<span asp-validation-for="ImageUploadCardText" class="text-danger"></span>
+			</div>
+			<div class="mb-3 mb-auto">
+				<span class="nameInput">Logo </span>
+				<div class="confirm">
+					<input type="file" class="w-100" placeholder="Logo" name="ImageUploadLogo" id="ImageUploadLogo"">
+				</div>
+				<span asp-validation-for=" ImageUploadLogo" class="text-danger"></span>
+				</div>
+				<div class="text-end mt-5">
+					<a class="btn btn-simple" href="/admin/games">Huỷ bỏ</a>
+					<button class="btn" type="submit">Save</button>
+				</div>
+		</form>
+	</div>
+</div>
+
+@section js {
+	<script type="module" src="/admin/js/game.js"></script>
+}

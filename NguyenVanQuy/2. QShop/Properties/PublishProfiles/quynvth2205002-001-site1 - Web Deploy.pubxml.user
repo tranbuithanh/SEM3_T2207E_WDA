@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZazylGhrREOHKpBk+cSquQAAAAACAAAAAAAQZgAAAAEAACAAAADQCAsy+WSwar6uKcErJfRq5Bg460e9nvcPK7YDBmccXgAAAAAOgAAAAAIAACAAAADOero8TJwUl1nsIYuhpGWqd/8pJWbeyE6lv+gnKeL33iAAAADqC9cou/U5WrM44jRc5dBrspF8V4rABg+QLtkD2cRWK0AAAABTwpBm65MnMluFgJICchdecp72ZSEFIKuNR2IfF0E19p6A0emvF1ZfwWt6Vxc5fpxdesgim1ZVJldDy6RYOu8p</EncryptedPassword>
+    <History>True|2023-09-24T18:43:51.8455200Z;True|2023-09-25T01:03:09.8786691+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="QShopContext">
+      <Value>Data Source=SQL5103.site4now.net%3bInitial Catalog=db_a9f4c7_qshop%3bUser Id=db_a9f4c7_qshop_admin%3bPassword=Qq260293</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="QShop.Data.QShopContext">
+      <Value>Data Source=SQL5103.site4now.net%3bInitial Catalog=db_a9f4c7_qshop%3bUser Id=db_a9f4c7_qshop_admin%3bPassword=Qq260293</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

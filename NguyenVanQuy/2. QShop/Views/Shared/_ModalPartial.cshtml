@@ -1,0 +1,89 @@
+<div class="modal-popup row m-0" style="display: none" id="modal-bank">
+	<div class="modal-popup-wrapper d-flex flex-column col-10 col-sm-10 col-md-8 col-lg-6">
+		<div class="mb-auto">
+			<div class="mb-3">
+				<span class="nameInput">Chủ tài khoản </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="NGUYEN VAN QUY" style="pointer-events: none;">
+				</div>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Số tài khoản </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="0560118908002" style="pointer-events: none;">
+				</div>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Ngân hàng </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="Ngân hàng MBBank Chi nhánh Hoàng Quốc Việt"
+						style="pointer-events: none;">
+				</div>
+			</div>
+			<div class="my-3">Hoặc quét mã QR</div>
+			<div style="width:100%; height: 200px" class="text-center d-flex justify-content-center mb-3">
+				<img src="/images/QR.png" alt="" class="img-thumbnail">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="btn btn-border w-100 btn-popup-cancel">Huỷ bỏ</div>
+			</div>
+			<div class="col">
+				<div class="btn w-100" id="btn-recharge-bank">Xác nhận chuyển khoản</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-popup row m-0" style="display: none" id="modal-phone-card">
+	<form class="modal-popup-wrapper d-flex flex-column col-10 col-sm-10 col-md-8 col-lg-6" id="rechargeCardForm">
+		<div class="mb-auto">
+			<div class="mb-3">
+				<span class="nameInput">Chọn loại thẻ </span>
+				<div class="confirm">
+					<select class="select-phone-card-type" name="Type" id="phone-card-type">
+						<option></option>
+						<option value="VT">Viettel</option>
+						<option value="MF">MobiFone</option>
+						<option value="VP">VinaPhone</option>
+					</select>
+				</div>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Chọn mệnh giá </span>
+				<div class="confirm">
+					<select class="select-phone-card-denomination" name="Denomination" id="phone-card-denomination">
+						<option></option>
+						<option value="10000">10.000</option>
+						<option value="20000">20.000</option>
+						<option value="50000">50.000</option>
+						<option value="100000">100.000</option>
+						<option value="200000">200.000</option>
+						<option value="500000">500.000</option>
+					</select>
+				</div>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Số serial </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="Nhập serial" name="serial" id="serial">
+				</div>
+			</div>
+			<div class="mb-3">
+				<span class="nameInput">Nhập mã thẻ </span>
+				<div class="confirm">
+					<input type="text" class="w-100" placeholder="Nhập mã thẻ" name="code" id="code">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="btn btn-border w-100 btn-popup-cancel">Huỷ bỏ</div>
+			</div>
+			<div class="col">
+				<button type="submit" class="btn w-100" id="btn-recharge-card">Nạp thẻ</button>
+			</div>
+		</div>
+	</form>
+</div>

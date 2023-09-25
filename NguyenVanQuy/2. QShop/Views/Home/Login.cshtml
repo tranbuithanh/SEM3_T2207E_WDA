@@ -1,0 +1,82 @@
+﻿@model QShop.Models.User
+
+@{
+	Layout = "_LayoutAuthentication";
+	ViewData["Title"] = "Login | Qshop";
+}
+
+<form action="~/home/login" method="post" id="loginForm">
+	<input type="hidden" name="remember_me" value="1" />
+	<input type="hidden" name="_token" value="YAQGOC2dJYVXBc0PuUlCGk4lc3HSHpjICvgdmYM0" />
+	<div class="row">
+		<div class="col-lg-7"></div>
+		<div class="col-lg-5">
+			<div class="right_part space-y-10">
+				<h1 class="mt-5 pt-3">
+					<span class="color_white fw-bold">Welcome to</span>
+					<span class="color_white fw-bold gradient">QShop</span>
+				</h1>
+				<p class="color_white" style="color: white !important">
+					Bạn chưa có tài khoản? <a href="~/home/register" class="text-decoration-underline"> Đăng ký </a>
+				</p>
+				<div class="box edit_box w-full space-y-20">
+					<div class="space-y-10">
+						<span class="nameInput">Email </span>
+						<div class="confirm">
+							<input type="text" class="form-control" placeholder="Enter email" value="@Model.Email" name="Email"
+								id="Email" />
+						</div>
+					</div>
+					<span asp-validation-for="Email" class="text-danger"></span>
+					<div class="space-y-10">
+						<span class="nameInput">Mật khẩu</span>
+						<div class="confirm">
+							<input type="password" class="form-control" placeholder="Enter your password" name="Password"
+								id="Password" />
+						</div>
+					</div>
+					<span asp-validation-for="Password" class="text-danger"></span>
+					<button type="submit" class="btn btn-grad w-full mt-4">Đăng nhập</button>
+					<p class="color_white" style="color: white !important">
+						Bạn quên mật khẩu? <a href="/home/beingCompleted"> Khôi phục mật khẩu </a>
+					</p>
+					<div class="social-login-separator"><span>hoặc</span></div>
+					<div class="w-100 text-center" style="margin-top: 40px">
+						<a class="btn btn-primary" href="/home/beingCompleted"><i class="bi bi-google"></i> Đăng nhập với Google</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+@section js {
+	<script src="/js/jquery.validate.min.js"></script>
+	<script>
+		// validate signup form on keyup and submit
+		$("#loginForm").validate({
+			rules: {
+				Email: {
+					required: true,
+					email: true
+				},
+				Password: {
+					required: true,
+					minlength: 6
+				}
+			},
+			messages: {
+				Email: {
+					required: "*Email không được để trống.",
+					email: "*Email không đúng định dạng."
+				},
+				Password: {
+					required: "*Password không được để trống.",
+					minlength: "*Password tối thiểu 6 ký tự."
+				}
+			}, submitHandler: function (form) {
+				form.submit();
+			}
+		});
+	</script>
+}

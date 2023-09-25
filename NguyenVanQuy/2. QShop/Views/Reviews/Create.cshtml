@@ -1,0 +1,87 @@
+﻿@model QShop.Models.User
+
+@{
+	ViewData["Title"] = "Đánh giá | QShop";
+	Layout = "_Layout";
+}
+
+@section css {
+	<link rel="stylesheet" href="/css/reviews.css" />
+}
+<div class="container-fluid p-0" style="margin-top: 66px">
+	<div class="hero_marketplace bg_white">
+		<div class="container">
+			<h1 class="text-center text-uppercase">Đánh giá về QShop</h1>
+		</div>
+	</div>
+</div>
+<div class="container mb-5">
+	<div class="reviews-wrap">
+		<form class="reviews-block m-0" method="post" action="/reviews/create" id="reviewsForm">
+			<h2>Hãy cho chúng tôi biết trải nghiệm của bạn về QShop</h2>
+			<div class="reviews-rating">
+				<div class="rating">
+					<input type="radio" name="Rating" value="5" id="5" /><label for="5"><i class="bi bi-star-fill"></i></label>
+					<input type="radio" name="Rating" value="4" id="4" /><label for="4"><i class="bi bi-star-fill"></i></label>
+					<input type="radio" name="Rating" value="3" id="3" /><label for="3"><i class="bi bi-star-fill"></i></label>
+					<input type="radio" name="Rating" value="2" id="2" /><label for="2"><i class="bi bi-star-fill"></i></label>
+					<input type="radio" name="Rating" value="1" id="1" /><label for="1"><i class="bi bi-star-fill"></i></label>
+				</div>
+			</div>
+			<div class="input-block">
+				<label>Tên tài khoản</label>
+				<input type="text" name="UserName" placeholder="Enter fill name" required="" value="@Model.UserName"
+					style="pointer-events: none;" />
+				<input type="number" name="UserId" value="@Model.Id" hidden>
+			</div>
+			<div class="input-block">
+				<label>Đánh giá của bạn về QShop</label>
+				<textarea name="content" placeholder="Đánh giá của bạn" id="content"></textarea>
+			</div>
+			<div class="reviews-buttons">
+				<div class="reviews-btn">
+					<a href="/reviews/" class="btn btn-border w-100">Huỷ bỏ</a>
+				</div>
+				<div class="reviews-btn">
+					<button class="btn w-100"><span>Đánh giá</span></button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section js {
+	<script>
+		$().ready(function () {
+			$('.rating label').click(function () {
+				$(this).prev().prop("checked", true);
+				var selectedRating = $("input[name='Rating']:checked").val();
+				for (let i = 1; i <= 5; i++) {
+					if (i <= selectedRating) {
+						$("label[for='" + i + "']").html('<i class="bi bi-star-fill"></i>')
+					} else {
+						$("label[for='" + i + "']").html('<i class="bi bi-star"></i>')
+					}
+				}
+			});
+			// Validate
+			$('#reviewsForm').validate({
+				rules: {
+					content: {
+						required: true,
+						minlength: 10,
+					},
+				},
+				messages: {
+					content: {
+						required: '*Đánh giá không được để trống.',
+						minlength: '*Đánh giá tối thiểu 10 ký tự.',
+					}
+				},
+				submitHandler: function (form) {
+					form.submit();
+				}
+			});
+		});
+	</script>
+}

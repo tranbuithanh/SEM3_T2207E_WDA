@@ -1,0 +1,47 @@
+@using QShop.Models;
+@model QShop.Models.Article;
+
+@{
+	ViewData["Title"] = "Blog | QShop";
+	Layout = "_Layout";
+	dynamic result = ViewData["result"];
+}
+
+@section css {
+	<link rel="stylesheet" href="/css/article.css" />
+	<link rel="stylesheet" href="/css/pagination.css" />
+}
+<div class="article">
+	<div class="container-fluid p-0" style="margin-top: 66px">
+		<div class="hero_marketplace bg_white">
+			<div class="container">
+				<h1 class="text-center text-uppercase">Đọc những điều thú vị về Liên Minh Huyền Thoại</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="blog-top row justify-content-between">
+			<div class="blog-img card col-12 col-sm-12 col-md-7 col-lg-7"><a href="/articles/details/?id=@Model.Id">
+					<img src=@Model.Thumbnail title="apps for lol"></a>
+			</div>
+			<div class="blog-info card col-12 col-sm-12 col-md-4 col-lg-4">
+				<span class="posts-date">@Model.CreatedAt.ToString("dd/MM/yyyy")</span>
+				<span class="posts-name"><a href="/articles/details/?id=@Model.Id">@Model.Title</a></span>
+				<p>@Model.Description
+				</p>
+				<a href="/articles/details/?id=@Model.Id" class="posts-link"><i class="bi bi-chevron-double-right"></i> Đọc
+					thêm</a>
+			</div>
+		</div>
+		<div class="blog-content">
+			<div class="posts-row row" id="data">
+			</div>
+			<div id="pagination" class="justify-content-end p-0" style="margin-bottom: 10px">
+			</div>
+		</div>
+	</div>
+</div>
+@section js {
+	<script type="module" src="/js/pagination.js"></script>
+	<script type="module" src="/js/article.js"></script>
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="quynvth2205002-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Quy\\My\ app\\QShop\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="QShop.Data.QShopContext" description="" value="Data Source=SQL5103.site4now.net;Initial Catalog=db_a9f4c7_qshop;User Id=db_a9f4c7_qshop_admin;Password=Qq260293" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Quy\\My\ app\\QShop\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\QShop\.Data\.QShopContext\.sql$" />
+  </parameter>
+</parameters>

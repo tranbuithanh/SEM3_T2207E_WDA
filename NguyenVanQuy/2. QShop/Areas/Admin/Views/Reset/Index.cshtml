@@ -1,0 +1,42 @@
+@model QShop.Models.Banner
+
+@{
+	ViewData["Title"] = "Reset | Qshop";
+	ViewData["Page"] = "home";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section css {
+}
+<div class="hero_marketplace-admin bg_white">
+	<div class="container">
+		<h1 class="text-center text-uppercase">Khôi phục dữ liệu</h1>
+	</div>
+</div>
+<div class=" px-5">
+	<div class="w-75 mx-auto" method="post">
+		<p>
+			Việc này sẽ đưa các Account về trạng thái <span class="fw-bold" style="color:var(--red-color)">chưa bán</span>,
+			các thông báo, hoá đơn, chi tiết
+			hoá đơn sẽ được
+			<span class="fw-bold" style="color:var(--red-color)">xoá</span> khỏi cơ
+			sở dữ liệu.
+		</p>
+		<p>Bạn nên cân nhắc trước khi thực hiện việc này. </p>
+		<p>Việc này không thể hoàn tác. Nhấn <span style="color:var(--green-color)" class="fw-bold">Đồng ý</span> để khôi
+			phục dữ liệu.</p>
+		<div class="text-end mt-3">
+			<a class="btn" type="submit" href="/admin/home"
+				style="background: linear-gradient(98.65deg, rgba(244, 96, 54, 0.2) 2.08%, rgba(173, 0, 255, 0.04) 185.76%) !important;">Huỷ
+				bỏ</a>
+			<a class="btn" type="submit" href="/admin/reset/yes"
+				style="    background: linear-gradient(98.65deg, rgba(86, 227, 159, 0.2) 2.08%, rgba(173, 0, 255, 0.04) 185.76%) !important;">Đồng
+				ý</a>
+		</div>
+	</div>
+
+	@section js {
+		<script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
+		<script type="module" src="/admin/js/banner.js"></script>
+		<script>
+		</script>
+	}

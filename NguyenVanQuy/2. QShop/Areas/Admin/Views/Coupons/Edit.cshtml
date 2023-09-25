@@ -1,0 +1,68 @@
+@model QShop.Models.Coupon
+@{
+	ViewData["Title"] = "Tài khoản | Qshop";
+	ViewData["Page"] = "coupons";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section css {
+	<link rel="stylesheet" href="/css/customSelect2.css">
+}
+<div class="hero_marketplace-admin bg_white">
+	<div class="container">
+		<h1 class="text-center text-uppercase">CẬP NHẬT MÃ GIẢM GIÁ</h1>
+	</div>
+</div>
+<form method="post" class="w-50 mx-auto form-main" action="/admin/coupons/edit/?id=@Model.Id"
+	enctype="multipart/form-data">
+	@Html.AntiForgeryToken()
+	<div class="d-flex flex-column">
+		<div class="mb-3">
+			<span class="nameInput">Tên mã giảm giá </span>
+			<div class="confirm">
+				<input type="text" class="w-100" placeholder="Tên mã giảm giá" name="Code" value="@Model.Code" />
+			</div>
+			<span asp-validation-for="Code" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<span class="nameInput">Giảm giá (Chú ý: Nhập vào 20 để giảm 20%) </span>
+			<div class="confirm">
+				<input type="number" class="w-100" placeholder="=100%" name="DiscountPercentage"
+					value="@(Model.DiscountPercentage*100)" />
+			</div>
+			<span asp-validation-for="DiscountPercentage" class="text-danger"></span>
+		</div>
+		<div class="space-y-10">
+			<span class="nameInput">Hạn dùng </span>
+			<div class="confirm">
+				<input type="date" class="form-control" placeholder="Hạn sử dụng" name="ExpiryDate"
+					value="@DateTime.Now.ToString("yyyy-MM-dd")">
+			</div>
+		</div>
+		<span asp-validation-for="ExpiryDate" class="text-danger"></span>
+		<div class="mb-3">
+			<span class="nameInput">Số lượng</span>
+			<div class="confirm">
+				<input type="number" class="form-control" placeholder="Số lượng" name="SingleUse" value="@Model.SingleUse">
+			</div>
+		</div>
+		<span asp-validation-for="SingleUse" class="text-danger"></span>
+		<div class="mb-3">
+			<span class="nameInput">Mô tả </span>
+			<div class="confirm">
+				<textarea class="w-100" name="Description" style="resize: vertical;" value="">@Model.Description</textarea>
+			</div>
+		</div>
+		<span asp-validation-for="Description" class="text-danger"></span>
+		<div class="text-end">
+			<a class="btn btn-simple" href="/admin/coupons">Huỷ bỏ</a>
+			<button class="btn" type="submit">Save</button>
+		</div>
+	</div>
+
+	</div>
+</form>
+
+@section js {
+	<script type="module" src="/admin/js/user.js"></script>
+}

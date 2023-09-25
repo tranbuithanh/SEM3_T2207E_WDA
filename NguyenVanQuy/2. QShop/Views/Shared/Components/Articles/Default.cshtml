@@ -1,0 +1,33 @@
+﻿@using QShop.Models;
+@model IEnumerable<QShop.Models.Article>
+@{
+
+}
+@foreach (var item in Model)
+{
+	<div class="col-12 col-sm-8 col-md-6 col-lg-4">
+		<div class="card__item four">
+			<div class="card_body space-y-10">
+				<div class="card_head">
+					<a href="/articles/details/?id=@item.Id">
+						<img src=@item.Thumbnail alt="">
+					</a>
+				</div>
+				<h6 class="card_title">@item.Title</h6>
+				<div class="card_footer d-block space-y-10">
+					<div class="card_footer justify-content-center">
+						<p>
+							@item.Description
+						</p>
+					</div>
+					<div class="hr"></div>
+					<div class="">
+						<a href="/articles/details/?id=@item.Id" class="posts-link"><i class="bi bi-chevron-double-right"></i>
+							Đọc
+							thêm</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
