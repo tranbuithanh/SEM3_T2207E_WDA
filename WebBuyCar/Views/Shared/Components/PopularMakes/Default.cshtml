@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BrandModel>
+
+@foreach (var item in Model)
+{
+        <div class="col pt-4">
+            <a asp-controller="Brand" asp-action="Index" asp-route-slug="@item.Slug">
+                <div class="list-images" style="width:141px; height: 108px">
+                    <img class="list-images-logo" src="~/media/brands/@item.ImageBrand" alt="@item.ImageBrand">
+                </div>
+            </a>
+        </div>
+}

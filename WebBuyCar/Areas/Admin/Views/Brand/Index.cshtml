@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BrandModel>
+
+<h3 class="p-4">List Brand</h3>
+
+<a class="p-4" asp-controller="Brand" asp-action="Create">Create</a>
+
+<div class="table-form p-4">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name Brand</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image Brand</th>
+                <th scope="col">Slug</th>
+                <th scope="col">Status</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int Id = 0;
+
+                foreach (var item in Model)
+                {
+                    Id++;
+
+                    <tr class="text-center">
+                        <th scope="row">@Id</th>
+                        <td>@item.NameBrands</td>
+                        <td>@item.Description</td>
+                        <td style="width:120px"><img style="width:120px; height:120px; object-fit:cover" src="~/media/brands/@item.ImageBrand"></td>
+                        <td>@item.Slug</td>
+                        <td>@item.Status</td>
+                        <td style="height:138px" class="d-flex justify-content-around ">
+                            <a asp-controller="Brand" asp-action="Edit" asp-route-id="@item.Id" style="width: 20px; height: 20px; display: block"><i class="fa-solid fa-pen-to-square" style="font-size:20px"></i></a>
+                            <a asp-controller="brand" asp-action="Delete" asp-route-id="@item.Id" style="width: 20px; height: 20px; display: block"><i class="fa-solid fa-trash" style="font-size:20px"></i></a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

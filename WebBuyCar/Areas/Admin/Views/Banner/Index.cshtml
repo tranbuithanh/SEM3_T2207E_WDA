@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BannerModel>
+
+<h3 class="p-4">List Banner</h3>
+
+<a class="p-4" asp-controller="Banner" asp-action="Create">Create</a>
+
+<div class="table-form p-4">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title Banner</th>
+                <th scope="col">Description Banner</th>
+                <th scope="col">Image Brand</th>
+                <th scope="col">Status</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int Id = 0;
+
+                foreach (var item in Model)
+                {
+                    Id++;
+
+                    <tr class="text-center">
+                        <th scope="row">@Id</th>
+                        <td>@item.TitleBanner</td>
+                        <td>@item.desBanner</td>
+                        <td style="width:120px"><img style="width:120px; height:120px; object-fit:cover" src="~/media/Banner/@item.ImageBanner"></td>
+                        <td>@item.Status</td>
+                        <td style="height:138px" class="d-flex justify-content-around ">
+                            <a asp-controller="Banner" asp-action="Edit" asp-route-id="@item.Id" style="width: 20px; height: 20px; display: block"><i class="fa-solid fa-pen-to-square" style="font-size:20px"></i></a>
+                            <a asp-controller="Banner" asp-action="Delete" asp-route-id="@item.Id" style="width: 20px; height: 20px; display: block"><i class="fa-solid fa-trash" style="font-size:20px"></i></a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

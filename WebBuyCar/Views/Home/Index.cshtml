@@ -1,0 +1,164 @@
+﻿@model IEnumerable<ProductModel>
+
+<!-- menu header -->
+
+<div class="header-menu" style="border-bottom: 0.5px solid gray;">
+    <div class="container" style="height: 100%;">
+        <nav style="height: 100%;">
+            <ul class="list-menu d-flex justify-content-between align-items-center " style="height: 100%;">
+                <!-- list menu header -->
+                <vc:menu-header></vc:menu-header>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+ <!--  banner  -->
+<div class="banner">
+    <vc:banner></vc:banner>
+</div>
+
+
+<!-- title list -->
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="Title-list" style="font-size: 34px;">Popular Makes</h2>
+            <a class="Link-list" asp-controller="AllProduct" asp-action="Index"><span>View all</span></a>
+        </div>
+    </div>
+</div>
+
+<!-- list - logo -->
+<div class="container">
+    <div class="row">
+
+        <!--logo-->
+        <vc:popular-makes></vc:popular-makes>
+        
+    </div>
+</div>
+
+<!-- title list -->
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="Title-list" style="font-size: 34px;">Popular Searches</h2>
+            <div class="list-arrow">
+                <a href=""><i class="bi bi-arrow-left-short"></i></a>
+                <a href=""><i class="bi bi-arrow-right-short"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- list item firt -->
+<div class="container">
+    <div class="row">
+        <!-- list item -->
+
+            <vc:popular-searches></vc:popular-searches>
+        </div>
+        
+    </div>
+</div>
+
+<!-- title list -->
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="Title-list" style="font-size: 34px;">Featured</h2>
+        </div>
+    </div>
+</div>
+
+<!-- list cars buy -->
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-4 mt-4">
+                <a asp-controller="Product" asp-action="Index" asp-route-Id="@item.Id" class="text-decoration-none">
+                    <div class="car-buy-img">
+                        <img src="~/media/products/@item.ImageProduct" alt="@item.ImageProduct">
+                    </div>
+                    <div class="infor-buy-car">
+                        <div class="infor-buy-car-main  d-flex justify-content-between align-items-center" style="margin-top: 10px;">
+                            <p class="name-car-buy">@item.NameCar</p>
+                            <span class="product-year-car">Product year: @item.YearOfManufacture</span>
+                        </div>
+                        <div class="infor-price-car-main  d-flex justify-content-between align-items-center" style="margin-top: 10px;">
+                            <p class="infor-car-price">$@item.Price</p>
+                            <a href="" class="buy-now">Buy Now</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+
+</div>
+
+<!-- title list -->
+<div class="container">
+    <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="Title-list" style="font-size: 34px;">The Journal</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="post-main" style="position: relative;">
+                <div class="post-main-img">
+                    <img src="images/post-lamborghini-main-1.jpeg" alt="">
+                </div>
+                <div class="post-main-content" style="position: absolute; bottom: 20px; padding: 20px;">
+                    <span class="post-main-time" style="color: white; font-size: 20px; font-weight: 300;">25 Aug 2023</span>
+                    <p class="post-main-title" style="color: white; font-size: 28px; line-height: 32px; font-weight: 300; margin-top: 15px;">BMW iVision Dee: Merging Digital Soul with the Future of Driving</p>
+                    <p class="post-main-des" style="color: white; font-weight: 300; margin-top: 15px;">Personalization is imperative in the luxury car field. A bespoke approach to cars now results in ...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-between">
+            <div class="post-child d-flex justify-content-between" style="height: 140px; width: 100%;">
+                <div class="post-child-img">
+                    <img src="images/post-mclaren-child-1.jpeg" alt="">
+                </div>
+                <div class="post-child-content" style=" margin-top: 20px;">
+                    <span class="post-child-time" style="font-size: 12px; font-weight: 300; color: gray;">15 AUG 2023</span>
+                    <p class="post-child-title" style="font-size: 20px; font-weight: 400; margin-top: 10px;">The Next Frontier: Four Cutting-Edge Future Features Redefining Supercar Technology</p>
+                    <p class="post-child-title" style="font-size: 12px; font-weight: 300; margin-top: 10px;"> As a company at the forefront of performance car development, Porsche has always strived to push ...</p>
+                </div>
+            </div>
+
+            <div class="post-child d-flex justify-content-between" style="height: 140px; width: 100%;">
+                <div class="post-child-img">
+                    <img src="images/post-mclaren-child-1.jpeg" alt="">
+                </div>
+                <div class="post-child-content" style=" margin-top: 20px;">
+                    <span class="post-child-time" style="font-size: 12px; font-weight: 300; color: gray;">15 AUG 2023</span>
+                    <p class="post-child-title" style="font-size: 20px; font-weight: 400; margin-top: 10px;">The Next Frontier: Four Cutting-Edge Future Features Redefining Supercar Technology</p>
+                    <p class="post-child-title" style="font-size: 12px; font-weight: 300; margin-top: 10px;"> As a company at the forefront of performance car development, Porsche has always strived to push ...</p>
+                </div>
+            </div>
+
+            <div class="post-child d-flex justify-content-between" style="height: 140px; width: 100%;">
+                <div class="post-child-img">
+                    <img src="images/post-mclaren-child-1.jpeg" alt="">
+                </div>
+                <div class="post-child-content" style=" margin-top: 20px;">
+                    <span class="post-child-time" style="font-size: 12px; font-weight: 300; color: gray;">15 AUG 2023</span>
+                    <p class="post-child-title" style="font-size: 20px; font-weight: 400; margin-top: 10px;">The Next Frontier: Four Cutting-Edge Future Features Redefining Supercar Technology</p>
+                    <p class="post-child-title" style="font-size: 12px; font-weight: 300; margin-top: 10px;"> As a company at the forefront of performance car development, Porsche has always strived to push ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

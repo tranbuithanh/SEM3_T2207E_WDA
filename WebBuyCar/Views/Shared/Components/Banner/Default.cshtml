@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BannerModel>
+
+@foreach (var item in Model)
+{
+    <div class="banner_image">
+        <img src="~/media/banner/@item.ImageBanner" alt="banner-supercar">
+        <div class="banner_text">
+            <p class="banner_text-title">@item.TitleBanner</p>
+            <p class="banner_text-des">@item.desBanner</p>
+        </div>
+    </div>
+}

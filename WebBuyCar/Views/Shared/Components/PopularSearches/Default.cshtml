@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CategoryModel>;
+
+@{
+//int productCount = Model.Count(p => p.CategoryId == p.Category.Id);
+}
+
+@foreach (var item in Model)
+{<div class="col-4 pt-4">
+    <a asp-controller="Category" asp-action="Index" asp-route-slug="@item.Slug">
+        <div class="list-item-main">
+            <div class="list-item-main_img">
+                <img src="~/media/categories/@item.ImageCategory" alt="">
+            </div>
+            <div class="list-item-title">
+                <p>@item.NameCategory</p>
+            </div>
+            <div class="list-item-des">
+                <span>2 list</span>
+            </div>
+        </div>
+    </a>
+   </div>
+}
+

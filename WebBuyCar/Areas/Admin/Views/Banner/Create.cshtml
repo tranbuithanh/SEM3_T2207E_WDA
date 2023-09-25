@@ -1,0 +1,54 @@
+﻿@model BannerModel
+
+<h3 class="p-4">Add Banner</h3>
+<div class="col-md-9 p-4">
+    <form asp-action="Create" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label>Title Banner</label>
+            <input asp-for="TitleBanner" class="form-control" />
+            <span asp-validation-for="TitleBanner" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Description Banner</label>
+            <textarea asp-for="desBanner" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <input asp-for="Status" class="form-control" />
+            <span asp-validation-for="Status" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Image Upload</label>
+            <input asp-for="ImageUpload" class="form-control-file" />
+            <span asp-validation-for="ImageUpload" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Create</button>
+        </div>
+
+    </form>
+    <a asp-action="Index">Back to list Product</a>
+</div>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>CKEDITOR.replace('Description', {
+            language: 'vi',
+            autoParagraph: false,
+            entities: false,
+            basicEntities: false,
+            entities_greek: false,
+            entities_latin: false,
+            entities_processNumerical: false,
+            entities_additional: '',
+            removePlugins: 'entities',
+            htmlEncodeOutput: false,
+            entities_processNumerical: false,
+            entities: false,
+            entities_latin: false,
+            entities_greek: false
+        });</script>
+}

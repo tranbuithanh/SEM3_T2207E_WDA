@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Admin | E-Shopper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/price-range.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/adminSuperCar.css">
+    <link rel="stylesheet" href="fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+    <div class="row" style="height: 100%;">
+        <!-- menu -->
+        <div class="col-2 p-0">
+            <div class="bg-black">
+                <div class="logo-car-menu">
+                    <img src="~/images/logocar-01.png" alt="">
+                </div>
+                <div class="menu-left d-flex flex-column">
+                    <ul class="text-center ">
+                        <li class=" m-5"><a asp-controller="DashBoard" asp-action="Index" class="text-decoration-none text-light"><i class="fa-solid fa-chart-pie text-light me-2"></i>Dashboard</a></li>
+                        <li class=" m-5"><a asp-controller="Banner" asp-action="Index" class="text-decoration-none text-light"><i class="fa-regular fa-image text-light me-2"></i>Banner</a></li>
+                        <li class=" m-5"><a href="" class="text-decoration-none text-light"><i class="fa-solid fa-cart-shopping text-light me-2"></i>Orders</a></li>
+                        <li class=" m-5"><a asp-controller="Product" asp-action="Index" class="text-decoration-none text-light"><i class="fa-solid fa-store text-light me-2"></i>Products</a></li>
+                        <li class=" m-5"><a asp-controller="Category" asp-action="Index" class="text-decoration-none text-light"><i class="fa-regular fa-folder-open text-light me-2"></i>Category</a></li>
+                        <li class=" m-5"><a asp-controller="Brand" asp-action="Index" class="text-decoration-none text-light"><i class="fa-solid fa-globe text-light me-2"></i>Brands</a></li>
+                    </ul>
+                    <div class="Logout text-center m-5">
+                        <a href="" class="text-decoration-none text-light"><i class="fa-solid fa-right-from-bracket me-2"></i>Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+
+        <div class="col-10 p-0">
+            <div class="bg-body-secondary" style="height: 100%;">
+
+                <!--  tab tob -->
+                <div class="tab-top d-flex  pt-4 px-4 justify-content-between align-items-center">
+                    <!-- search box -->
+                    <div class="search_box" style="width: 30%">
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- account -->
+
+                    <div class="AccountAndNoti d-flex justify-content-between align-items-center" style="width: 200px;">
+                        <div class="noti">
+                            <p><i class="fa-solid fa-bell"></i></p>
+                        </div>
+                        <div class="Account d-flex  justify-content-between align-items-center" style="width: 160px;">
+                            <div class="AvatarAccount">
+                                <img src="~/images/avatar.png" alt="" style="width: 40px;">
+                            </div>
+                            <div class="nameAccount">
+                                <p>HieuHee</p>
+                            </div>
+                            <div class="ArrowAccount">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- table -->
+                @RenderBody()
+            </div>
+        </div>
+        
+
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="~/js/DashBoard.js"></script>
+@await RenderSectionAsync("Scripts", required: false);
+</html>

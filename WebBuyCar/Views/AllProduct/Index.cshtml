@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ProductModel>
+
+
+<div class="header-menu bg-black" style="border-bottom: 0.5px solid gray; height: 50px;">
+    <div class="container" style="height: 100%;">
+        <nav style="height: 100%;">
+            <form action="~/AllProduct/" method="post" style="height:100%">
+                <ul class="d-flex align-items-center h-100 w-25 justify-content-between">
+
+                    <li>
+                        <select name="Brands" class="form-control bg-transparent">
+                            <option class="text-white">Brands</option>
+                            @foreach (var item in ViewData["BrandId"] as SelectList)
+                            {
+                                <option class="text-white" value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </li>
+
+                    <li>
+                        <select name="Year" class="form-control bg-transparent">
+                            <option class="text-white">Year</option>
+                            @foreach (var item in ViewData["Year"] as SelectList)
+                            {
+                                <option class="text-white" value="@item.Text">@item.Text</option>
+                            }
+                        </select>
+                    </li>
+                    <button type="submit" class="buy-now">Submit</button>
+
+
+                </ul>
+            </form>
+        </nav>
+    </div>
+</div>
+
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            <span class="pt-5" style="font-size: 16px; font-weight: 300;">Cars</span>
+            <h3 class="pt-3">Luxury Cars For Sale</h3>
+            <span class="pt-3" style="font-size: 16px; font-weight: 300;">100+ listings</span>
+        </div>
+    </div>
+</div>
+
+<div class="page-list-car pt-3">
+    <div class="container">
+        <div class="row g-3">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-4 mt-4">
+                    <a asp-controller="Product" asp-action="Index" asp-route-Id="@item.Id">
+                        <div class="car-buy-img">
+                            <img src="~/media/products/@item.ImageProduct" alt="">
+                        </div>
+                        <div class="infor-buy-car">
+                            <div class="infor-buy-car-main  d-flex justify-content-between align-items-center" style="margin-top: 10px;">
+                                <p class="name-car-buy">@item.NameCar</p>
+                                <span class="product-year-car">Product year: @item.YearOfManufacture</span>
+                            </div>
+                            <div class="infor-price-car-main  d-flex justify-content-between align-items-center" style="margin-top: 10px;">
+                                <p class="infor-car-price">$@item.Price</p>
+                                <a href="" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

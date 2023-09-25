@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ProductModel>
+
+<h3>List Product</h3>
+
+<a  asp-controller="Product" asp-action="Create">Create</a>
+
+<div class="table-form p-4">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name Car</th>
+                <th scope="col">Car Price</th>
+                <th scope="col">Images</th>
+                <th scope="col">Slug</th>
+                <th scope="col">Description</th>
+                <th scope="col">Year of manu facture</th>
+                <th scope="col">Name Category</th>
+                <th scope="col">Name Brand</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int Id = 0;
+
+                foreach (var item in Model)
+                {
+                    Id++;
+
+                        <tr>
+                            <th scope="row">@Id</th>
+                            <td>@item.NameCar</td>
+                            <td>@item.Price</td>
+                            <td style="width:120px"><img style="width:120px; height:120px; object-fit:cover" src="~/media/products/@item.ImageProduct"></td>
+                            <td>@item.Slug</td>
+                            <td>@item.Description</td>
+                            <td>@item.YearOfManufacture</td>
+                            <td>@item.Category.NameCategory</td>
+                            <td>@item.Brand.NameBrands</td>
+                            <td style="height:138px" class="d-flex justify-content-around ">
+                                <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.Id" style="width: 20px; height: 20px; display: block"><i class="fa-solid fa-pen-to-square" style="font-size:20px"></i></a>
+                                <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" style="width: 20px; height: 20px; display: block"><i class="fa-solid fa-trash" style="font-size:20px"></i></a>
+                            </td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,280 @@
+.header{
+    background-color: black;
+  }
+  .search {
+    width: 70%;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  .searchTerm {
+    width: 100% !important;
+    border: 3px solid white;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: white;
+  }
+  
+  .searchTerm:focus{
+    color: white;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    background: gray;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .Login{
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 30px;
+      color: white;
+  }
+
+  .Login p{
+    color: white;
+  }
+  
+  .sell_link{
+    color: white;
+  }
+
+.banner_image{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center;
+}
+
+.banner_text{
+    position: absolute;
+    bottom: 50px;
+    color: white;
+    padding: 0 5vw 60px;
+}
+
+.banner_text-title{
+    font-size: 68px;
+    line-height: 68px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.banner_text-des{
+    margin-top: 40px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 15px;
+    letter-spacing: 1px;
+    max-width: 100%;
+}
+
+.header-menu{
+    background-color: black;
+    height: 46px;
+  }
+
+
+.list-menu li a{
+    text-decoration: none;
+    color:  white;
+    font-weight: 300;
+}
+
+.list-menu li a span{
+  color: white;
+}
+/* style Title list */
+
+.Title-list{
+    font-size: 34px;
+    margin: 50px 0 30px;
+}
+
+.Link-list{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.list-images {
+    width: 141px;
+    height: 106px;
+}
+
+.list-images img {
+    width: 100%;
+    height: 100%;
+}
+
+.list-arrow{
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+}
+
+.list-arrow a{
+font-size: 40px;
+color: black;
+width: 40px;
+height: 40px;
+display: block;
+border: 1px solid gray;
+border-radius: 50%;
+}
+
+
+.list-item-main{
+  height: 128px;
+  border: 1px solid gray;
+  width: 100%;
+  position: relative;
+
+}
+
+.list-item-main_img{
+  height: 100%;
+  width: 128px;
+}
+
+.list-item-main_img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.car-buy-img{
+  height: 240px;
+}
+
+.car-buy-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.list-item-title{
+  position: absolute;
+  left: 146px;
+  top: 50px;
+  line-height: 24px;
+  font-size: 20px;
+  color: black;
+}
+
+.list-item-des{
+  position: absolute;
+  left: 146px;
+  bottom: 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.infor-buy-car{
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-top: none;
+}
+
+.infor-click-buy{
+  padding: 10px;
+  background-color: gray;
+}
+
+.infor-click-buy a{
+  color: white;
+  text-decoration: none;
+}
+
+.infor-car-price{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.infor-buy-car-des{
+  font-size: 15px;
+  font-weight: 300;
+  display: block;
+}
+
+.name-car-buy{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.product-year-car{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.infor-car-price{
+  font-size: 24px;
+  font-weight: 500px;
+  
+}
+
+.buy-now{
+  padding: 10px 30px;
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+}
+
+.post-main-img{
+  height: 460px;
+}
+.post-main-img img{
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  object-position: center;
+}
+
+.post-child-img{
+  height: 100%;
+  width: 195px;
+}
+
+.post-child-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.post-child-content{
+  width: 90%;
+  margin-left: 20px;
+}

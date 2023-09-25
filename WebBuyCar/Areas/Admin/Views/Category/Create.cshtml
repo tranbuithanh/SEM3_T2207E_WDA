@@ -1,0 +1,55 @@
+﻿@model CategoryModel
+
+<h3 class="p-4">Add Product</h3>
+<div class="col-md-9 p-4">
+    <form asp-action="Create" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label>Name Category</label>
+            <input asp-for="NameCategory" class="form-control" />
+            <span asp-validation-for="NameCategory" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <input asp-for="Status" class="form-control" />
+            <span asp-validation-for="Status" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Image Upload</label>
+            <input asp-for="ImageUpload" class="form-control-file" />
+            <span asp-validation-for="ImageUpload" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Create</button>
+        </div>
+
+    </form>
+    <a asp-action="Index">Back to list Product</a>
+</div>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>CKEDITOR.replace('Description', {
+            language: 'vi',
+            autoParagraph: false,
+            entities: false,
+            basicEntities: false,
+            entities_greek: false,
+            entities_latin: false,
+            entities_processNumerical: false,
+            entities_additional: '',
+            removePlugins: 'entities',
+            htmlEncodeOutput: false,
+            entities_processNumerical: false,
+            entities: false,
+            entities_latin: false,
+            entities_greek: false
+        });</script>
+}

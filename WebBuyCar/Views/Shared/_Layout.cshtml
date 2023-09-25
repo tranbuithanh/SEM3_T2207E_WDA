@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | E-Shopper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/price-range.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/supercar.css">
+    <link rel="stylesheet" href="~/fonts/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="~/js/html5shiv.js"></script>
+    <script src="~/js/respond.min.js"></script>
+    <link rel="shortcut icon" href="~/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+    <header>
+         @*header top*@ 
+        <div class="header" style="border-bottom: 0.5px solid gray;">
+            <div class="container">
+                <div class="row">
+                     @*header-top*@ 
+                    <div class="header-top d-flex flex-row  align-items-center justify-content-between">
+
+                         @*toggle menu*@ 
+                        <p style="font-size: 30px; color: white;"><i class="bi bi-list"></i></p>
+                         @*logo*@ 
+                        <a asp-controller="Home" style="width: 150px;"><img style="width: 100%; object-fit: cover;" src="~/images/logocar-01.png" alt=""></a>
+                         @*form search*@ 
+                        <div class="search_box" style="width: 70%">
+                            <div class="search">
+                                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                                <button type="submit" class="searchButton">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                          
+
+                        <a href="#" style="text-decoration: none; color: white" class="sell_link">Sell With Us</a>
+                        <div class="Login">
+                            <p><i class="bi bi-person"></i> Login</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+     @*header menu*@ 
+
+    
+
+    @RenderBody();
+    <div class="footer" style="height: 400px; background-color: black; margin-top: 20px;"></div>
+</body>
+</html>
