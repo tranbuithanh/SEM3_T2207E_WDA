@@ -1,0 +1,88 @@
+﻿<!--Phân trang thì bên này cần thêm những thứ sau-->
+@using Homestay_Management.Models;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<RoomModel>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "ListRoom";
+    //Thêm đường dẫn Layout để add các html header,sidebar có sẵn
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>List Room</h1>
+
+@* Thông báo xóa sản phẩm có thành công hay không *@
+<p>@TempData["Message"]</p>    
+<p>
+    <a asp-action="AddRoom">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                @Html.DisplayNameFor(model => model[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].TypeRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Status)
+            </th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* @{
+            int i = 0;
+            string @cls = "table-success";
+        } *@
+        @foreach (var item in Model) {
+        
+            @* i = i + 1;       //Đây là đoạn code thay đổi màu sắc theo các hàng
+            cls = "table-success";      
+            if(i%2==0)
+            {
+                cls = "table-primary";
+            } *@
+
+            <tr class="table-success">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>    <!--Hiển thị tên loại phòng-->
+                    @Html.DisplayFor(modelItem => item.TypeRoom.Name) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="EditRoom" asp-route-roomId="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="DeleteRoom" asp-route-roomId="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+<!--Pagination-->
+@Html.PagedListPager(Model, page=>Url.Action("listroom", "admin", new {page=page}),
+                    new X.PagedList.Web.Common.PagedListRenderOptions(){
+                        LiElementClasses = new List<String> {"page-item"},
+                        PageClasses = new List<String> {"page-link"}
+                    })
