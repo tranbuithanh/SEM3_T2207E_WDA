@@ -1,0 +1,6 @@
+﻿body {
+}
+
+.background-image {
+    background-image: url('/Assets/Img/Background1.jpg');
+    background-size: cover;
