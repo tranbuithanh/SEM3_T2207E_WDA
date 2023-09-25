@@ -1,0 +1,37 @@
+﻿@model BTTH.Models.ClassCourse
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ClassCourse</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClsName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClsName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClsDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClsDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClsOrder)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClsOrder)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Clsid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

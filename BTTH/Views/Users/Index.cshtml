@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BTTH.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UsName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsRole)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsRole)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Usid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Usid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Usid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
