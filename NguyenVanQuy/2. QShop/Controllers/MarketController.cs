@@ -36,87 +36,90 @@ namespace QShop.Controllers
 		[HttpPost]
 		public IActionResult Filter([FromBody] FilterData data)
 		{
-			var filterAccount = _context.Account?.Where(a => a.Status == "not sold").Include(a => a.rank).ToList();
+			var filterAccount = _context.Account?.Where(a => a.Status == "not sold").Include(a => a.rank).AsQueryable();
 			if (filterAccount != null)
 			{
 				if (data.Game != null)
 				{
 					Game? game = _context.Game?.FirstOrDefault(g => g.Slug == data.Game);
-					filterAccount = filterAccount.Where(a => a.GameId == game?.Id).ToList();
+					if (game != null)
+					{
+						filterAccount = filterAccount.Where(a => a.GameId == game.Id);
+					}
 				}
 				if (data.Champion != null)
 				{
 					int min = Int32.Parse(data.Champion.Split('-')[0]);
 					int max = Int32.Parse(data.Champion.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.Champion >= min && a.Champion <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.Champion >= min && a.Champion <= max);
 				}
 				if (data.Level != null)
 				{
 					int min = Int32.Parse(data.Level.Split('-')[0]);
 					int max = Int32.Parse(data.Level.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.Grade >= min && a.Grade <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.Grade >= min && a.Grade <= max);
 				}
 				if (data.Skin != null)
 				{
 					int min = Int32.Parse(data.Skin.Split('-')[0]);
 					int max = Int32.Parse(data.Skin.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.Skin >= min && a.Skin <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.Skin >= min && a.Skin <= max);
 				}
 				if (data.Skin != null)
 				{
 					int min = Int32.Parse(data.Skin.Split('-')[0]);
 					int max = Int32.Parse(data.Skin.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.Skin >= min && a.Skin <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.Skin >= min && a.Skin <= max);
 				}
 				if (data.Rp != null)
 				{
 					int min = Int32.Parse(data.Rp.Split('-')[0]);
 					int max = Int32.Parse(data.Rp.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.PrimaryPoint >= min && a.PrimaryPoint <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.PrimaryPoint >= min && a.PrimaryPoint <= max);
 				}
 				if (data.Essence != null)
 				{
 					int min = Int32.Parse(data.Essence.Split('-')[0]);
 					int max = Int32.Parse(data.Essence.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.SecondaryPoint >= min && a.SecondaryPoint <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.SecondaryPoint >= min && a.SecondaryPoint <= max);
 				}
 				if (data.Price != null)
 				{
 					int min = Int32.Parse(data.Price.Split('-')[0]);
 					int max = Int32.Parse(data.Price.Split('-')[1]);
-					filterAccount = filterAccount.Where(a => a.Price >= min && a.Price <= max).ToList();
+					filterAccount = filterAccount.Where(a => a.Price >= min && a.Price <= max);
 				}
 				if (data.Rank != null && data.Rank.Count() != 0)
 				{
 					List<int> ranks = data.Rank;
-					filterAccount = filterAccount.Where(a => ranks.Contains(a.RankId)).ToList();
+					filterAccount = filterAccount.Where(a => ranks.Contains(a.RankId));
 				}
 				if (data.Order != null)
 				{
 					switch (data.Order)
 					{
 						case "newest":
-							filterAccount = filterAccount.OrderByDescending(a => a.CreatedAt).ToList();
+							filterAccount = filterAccount.OrderByDescending(a => a.CreatedAt);
 							break;
 						case "oldest":
-							filterAccount = filterAccount.OrderBy(a => a.CreatedAt).ToList();
+							filterAccount = filterAccount.OrderBy(a => a.CreatedAt);
 							break;
 						case "price-desc":
-							filterAccount = filterAccount.OrderByDescending(a => a.Price).ToList();
+							filterAccount = filterAccount.OrderByDescending(a => a.Price);
 							break;
 						case "price-asc":
-							filterAccount = filterAccount.OrderBy(a => a.Price).ToList();
+							filterAccount = filterAccount.OrderBy(a => a.Price);
 							break;
 						case "rank-desc":
-							filterAccount = filterAccount.OrderByDescending(a => a.RankId).ToList();
+							filterAccount = filterAccount.OrderByDescending(a => a.RankId);
 							break;
 						case "rank-asc":
-							filterAccount = filterAccount.OrderBy(a => a.RankId).ToList();
+							filterAccount = filterAccount.OrderBy(a => a.RankId);
 							break;
 					}
 				}
 			}
-			return PartialView("_CardMarketPartial", filterAccount);
+			return PartialView("_CardMarketPartial", filterAccount?.ToList());
 		}
 
 		// GET: MarketController/Details/5

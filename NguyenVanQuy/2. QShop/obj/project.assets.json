@@ -10736,11 +10736,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Quy\\My app\\QShop\\QShop.csproj",
+      "projectUniqueName": "D:\\Quy\\Aptech\\Semester3\\ASP.NET\\Assignment\\SEM3_T2207E_WDA\\NguyenVanQuy\\2. QShop\\QShop.csproj",
       "projectName": "QShop",
-      "projectPath": "D:\\Quy\\My app\\QShop\\QShop.csproj",
+      "projectPath": "D:\\Quy\\Aptech\\Semester3\\ASP.NET\\Assignment\\SEM3_T2207E_WDA\\NguyenVanQuy\\2. QShop\\QShop.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Quy\\My app\\QShop\\obj\\",
+      "outputPath": "D:\\Quy\\Aptech\\Semester3\\ASP.NET\\Assignment\\SEM3_T2207E_WDA\\NguyenVanQuy\\2. QShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

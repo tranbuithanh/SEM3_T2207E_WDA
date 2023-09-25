@@ -200,4 +200,62 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWFya2V0R2FtZXNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/Compone
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/Components/Navbar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2YmFyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/Components/Reviews/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmV2aWV3c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/Components/SmallReviews/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU21hbGxSZXZpZXdzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_CardMarketPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJkTWFya2V0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_CardReviewPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJkUmV2aWV3UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_ChatboxPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGF0Ym94UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_LayoutAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRoZW50aWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_LoaderPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2FkZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_ModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/Quy/Aptech/Semester3/ASP.NET/Assignment/SEM3_T2207E_WDA/NguyenVanQuy/2. QShop/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1se7ikiu02

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c9vk9/KdUeJwpeUdGRz/KcqdY6krIgkDGcYGf1mZFKX/tSOD0JC2UCVCqvo3KONgGew3yKQV/AhUPh69qp5HZg==",
+  "dgSpecHash": "MmFAAM3VXrLdzufX73EgRbtBD27XPX+eXXY2ChHCfRmFCAZnmdmB6AQ8zxHD3cky0EUS+0zUmVmLdOYrd+0G6A==",
   "success": true,
-  "projectFilePath": "D:\\Quy\\My app\\QShop\\QShop.csproj",
+  "projectFilePath": "D:\\Quy\\Aptech\\Semester3\\ASP.NET\\Assignment\\SEM3_T2207E_WDA\\NguyenVanQuy\\2. QShop\\QShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

@@ -169,8 +169,20 @@
 }
 
 .howToBuy-under-line {
-  height: 3px;
-  background-color: #fff;
+    height: 3px;
+    background: var(--gradient-color-1) !important;
+    position: relative;
+}
+
+.howToBuy-under-line::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 10px solid rgb(31, 110, 255);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
 }
 
 .howToBuy-item {
