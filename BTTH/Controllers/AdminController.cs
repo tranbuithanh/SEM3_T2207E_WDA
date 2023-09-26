@@ -6,8 +6,7 @@ namespace BTTH.Controllers
 {
     public class AdminController : Controller
     {
-        [Authorize(Roles = "Admin")]
-        [Authorize(Roles = "Teacher")]
+   
         public IActionResult Index()
         {
             return View();

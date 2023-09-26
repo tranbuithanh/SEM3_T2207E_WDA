@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_adminlayout.cshtml";
 }
-
+<div class="w3-card w3-row-padding">
 <h1>Details</h1>
 
 <div>
@@ -34,4 +34,5 @@
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Sbjid">Edit</a> |
     <a asp-action="Index">Back to List</a>
+</div>
 </div>
