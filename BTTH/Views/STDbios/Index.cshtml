@@ -1,7 +1,4 @@
-﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-<link rel="stylesheet" href="~/BTTH.styles.css" asp-append-version="true" />
-@model IEnumerable<BTTH.Models.STDbio>
+﻿@model IEnumerable<BTTH.Models.STDbio>
 
 @{
     ViewData["Title"] = "Index";
@@ -17,12 +14,6 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ClassroomID.SbjName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StudentID.StdName)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.ExamMark)
             </th>
             <th>
@@ -31,18 +22,18 @@
             <th>
                 @Html.DisplayNameFor(model => model.Status)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sbjid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stdid)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                    @Html.DisplayFor(modelItem => item.ClassroomID.SbjName)
-            </td>
-            <td>
-                    @Html.DisplayFor(modelItem => item.StudentID.StdName)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ExamMark)
             </td>
@@ -51,6 +42,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sbjid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stdid)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.STDbioId">Edit</a> |

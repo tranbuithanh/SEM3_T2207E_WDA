@@ -13,9 +13,7 @@ using System.Data;
 namespace BTTH.Views
 {
     [Authorize(Roles = "Administrator")]
-
-    [Authorize(Roles = "Admin")]
-    [Authorize(Roles = "Teacher")]
+ 
     public class SubjectClsController : Controller
     {
         private readonly BTTHMVCContext _context;
@@ -64,12 +62,12 @@ namespace BTTH.Views
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Sbjid,SbjName,SbjDescription,SbjOrder")] SubjectCls subjectCls)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Add(subjectCls);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+           // }
             return View(subjectCls);
         }
 
@@ -101,8 +99,8 @@ namespace BTTH.Views
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+          //  if (ModelState.IsValid)
+            //{
                 try
                 {
                     _context.Update(subjectCls);
@@ -119,8 +117,8 @@ namespace BTTH.Views
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
+               // return RedirectToAction(nameof(Index));
+            //}
             return View(subjectCls);
         }
 

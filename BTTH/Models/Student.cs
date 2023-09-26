@@ -18,8 +18,8 @@ namespace BTTH.Models
         [Required]
         public string? StdImg { get;set; }
         
-        [ForeignKey("Clsid")]
-        [Display(Name = "Class")]
+        //[ForeignKey("Clsid")]
+        //[Display(Name = "Class")]
           public int Clsid { get; set; }
 
         public   ClassCourse Clsroom { get; set; }

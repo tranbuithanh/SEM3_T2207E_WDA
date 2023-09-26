@@ -10,12 +10,10 @@ using BTTH.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 
+
 namespace BTTH.Views
 {
     [Authorize(Roles = "Administrator")]
-  
-    [Authorize(Roles = "Admin")]
-    [Authorize(Roles = "Teacher")]
     public class STDbiosController : Controller
     {
         private readonly BTTHMVCContext _context;
@@ -28,9 +26,9 @@ namespace BTTH.Views
         // GET: STDbios
         public async Task<IActionResult> Index()
         {
-              return _context.STDbio != null ? 
-                          View(await _context.STDbio.ToListAsync()) :
-                          Problem("Entity set 'BTTHMVCContext.STDbio'  is null.");
+            return _context.STDbio != null ?
+                        View(await _context.STDbio.ToListAsync()) :
+                        Problem("Entity set 'BTTHMVCContext.STDbio'  is null.");
         }
 
         // GET: STDbios/Details/5
@@ -54,9 +52,8 @@ namespace BTTH.Views
         // GET: STDbios/Create
         public IActionResult Create()
         {
-            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName" );
-            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName" );
-
+            ViewData["Sbjid"] = new SelectList(_context.SubjectCls, "Sbjid", "SbjName");
+            ViewData["Stdid"] = new SelectList(_context.Student, "Stdid", "StdName");
             return View();
         }
 
@@ -65,17 +62,17 @@ namespace BTTH.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("STDbioId,Sbjid,Stdid,ExamMark,Progress,Status")] STDbio sTDbio)
+        public async Task<IActionResult> Create([Bind("STDbioId,ExamMark,Progress,Status,Sbjid,Stdid")] STDbio sTDbio)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(sTDbio);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", sTDbio.Sbjid);
-            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName", sTDbio.Stdid);
+            //  if (ModelState.IsValid)
+            //{
+            _context.Add(sTDbio);
+            await _context.SaveChangesAsync();
 
+            ViewData["Sbjid"] = new SelectList(_context.SubjectCls, "Sbjid", "SbjName", sTDbio.Sbjid);
+            ViewData["Stdid"] = new SelectList(_context.Student, "Stdid", "StdName", sTDbio.Stdid);
+            return RedirectToAction(nameof(Index));
+            // }
             return View(sTDbio);
         }
 
@@ -92,9 +89,8 @@ namespace BTTH.Views
             {
                 return NotFound();
             }
-            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", sTDbio.Sbjid);
-            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName", sTDbio.Stdid);
-
+            ViewData["Sbjid"] = new SelectList(_context.SubjectCls, "Sbjid", "SbjName", sTDbio.Sbjid);
+            ViewData["Stdid"] = new SelectList(_context.Student, "Stdid", "StdName", sTDbio.Stdid);
             return View(sTDbio);
         }
 
@@ -103,37 +99,36 @@ namespace BTTH.Views
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("STDbioId,Sbjid,Stdid,ExamMark,Progress,Status")] STDbio sTDbio)
+        public async Task<IActionResult> Edit(int id, [Bind("STDbioId,ExamMark,Progress,Status,Sbjid,Stdid")] STDbio sTDbio)
         {
             if (id != sTDbio.STDbioId)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            // if (ModelState.IsValid)
+            //{
+            try
             {
-                try
-                {
-                    _context.Update(sTDbio);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!STDbioExists(sTDbio.STDbioId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Update(sTDbio);
+                await _context.SaveChangesAsync();
             }
-            ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", sTDbio.Sbjid);
-            ViewData["Stdid"] = new SelectList(_context.ClassCourse, "Stdid", "StdName", sTDbio.Stdid);
-
-            return View(sTDbio);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!STDbioExists(sTDbio.STDbioId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            ViewData["Sbjid"] = new SelectList(_context.SubjectCls, "Sbjid", "SbjName", sTDbio.Sbjid);
+            ViewData["Stdid"] = new SelectList(_context.Student, "Stdid", "StdName", sTDbio.Stdid);
+            return RedirectToAction(nameof(Index));
+            //}
+            //  return View(sTDbio);
         }
 
         // GET: STDbios/Delete/5
@@ -168,14 +163,14 @@ namespace BTTH.Views
             {
                 _context.STDbio.Remove(sTDbio);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool STDbioExists(int id)
         {
-          return (_context.STDbio?.Any(e => e.STDbioId == id)).GetValueOrDefault();
+            return (_context.STDbio?.Any(e => e.STDbioId == id)).GetValueOrDefault();
         }
     }
 }

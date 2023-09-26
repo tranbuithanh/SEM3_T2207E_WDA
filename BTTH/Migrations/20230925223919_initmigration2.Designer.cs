@@ -4,6 +4,7 @@ using BTTH.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BTTH.Migrations
 {
     [DbContext(typeof(BTTHMVCContext))]
-    partial class BTTHMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20230925223919_initmigration2")]
+    partial class initmigration2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,16 +61,16 @@ namespace BTTH.Migrations
                     b.Property<int>("ClassroomIDSbjid")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExamMark")
+                    b.Property<int?>("ExamMark")
                         .HasColumnType("int");
 
-                    b.Property<int>("Progress")
+                    b.Property<int?>("Progress")
                         .HasColumnType("int");
 
                     b.Property<int>("Sbjid")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
+                    b.Property<int?>("Status")
                         .HasColumnType("int");
 
                     b.Property<int>("Stdid")

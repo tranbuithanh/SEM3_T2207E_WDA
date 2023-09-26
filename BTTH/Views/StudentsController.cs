@@ -14,8 +14,7 @@ namespace BTTH.Views
 {
     [Authorize(Roles = "Administrator")]
 
-    [Authorize(Roles = "Admin")]
-     
+ 
     public class StudentsController : Controller
     {
         private readonly BTTHMVCContext _context;
@@ -66,12 +65,12 @@ namespace BTTH.Views
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Stdid,StdName,StdBirth,StdTel,StdAdr,StdImg,Clsid")] Student student)
         {
-            if (ModelState.IsValid)
-            {
+           // if (ModelState.IsValid)
+            //{
                 _context.Add(student);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+             //   return RedirectToAction(nameof(Index));
+            //}
             ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", student.Clsid);
             return View(student);
         }
@@ -106,8 +105,8 @@ namespace BTTH.Views
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+//     if (ModelState.IsValid)
+  //  {
                 try
                 {
                     _context.Update(student);
@@ -124,8 +123,8 @@ namespace BTTH.Views
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
+            //    return RedirectToAction(nameof(Index));
+          //  }
             ViewData["Clsid"] = new SelectList(_context.ClassCourse, "Clsid", "ClsName", student.Clsid);
 
             return View(student);
